@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Route::post('/login', 'TestController@index');
 
-
+Route::get('/success', 'SuccessController@index');
 // Auth::routes();
 //
 // Route::get('/home', 'HomeController@index')->name('home');

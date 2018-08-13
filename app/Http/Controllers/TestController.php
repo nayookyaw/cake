@@ -9,10 +9,6 @@ use Log;
 
 class TestController extends Controller
 {
-	public function __construct()
-	{
-			$this->middleware('guest')->except('logout');
-	}
 	public function index(Request $inputs)
 	{
 		$email = $inputs->get('username');
@@ -31,7 +27,6 @@ class TestController extends Controller
 		}
 		if (!$loginFlag) { return response()->json(['error' => 'Username or Password is invalid'], 401); }
 
-		log::info(Auth::user());
 		return response()->json([
 			'success' => "SUCCESS"
 		]);
