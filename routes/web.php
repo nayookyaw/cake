@@ -12,11 +12,10 @@
 */
 
 Route::get('/', function () {
-   return view('test');
+   return view('layouts/cake/master');
 });
-Route::post('/login', 'TestController@index');
+Auth::routes();
 
-Route::get('/success', 'SuccessController@index');
-// Auth::routes();
-//
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+// Admin Home API
+Route::get('/admin/home', '')

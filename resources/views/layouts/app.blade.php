@@ -8,73 +8,72 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Bakery Service Platform</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+		<link rel="stylesheet" href="/css/library/bootstrap.css">
+		<link rel="stylesheet" href="/css/library/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/library/tipped.css">
+
+		<link rel="stylesheet" href="/css/logged/master/main.css">
+		<link rel="stylesheet" href="/css/logged/master/header.css">
+		<link rel="stylesheet" href="/css/logged/master/menu.css">
+		<link rel="stylesheet" href="/css/logged/master/footer.css">
+
+		<!-- library js  -->
+		<script src="js/library/jquery-3.3.1.js"></script>
+		<script src="js/library/jquery-3.3.1.min.js"></script>
+		<script src="js/library/bootstrap.min.js"></script>
+		<script src="js/library/bootstrap.js"></script>
+		<script src="js/library/tipped.js"></script>
+		<script src="js/library/select2.min.js"></script>
+		<script src="js/library/tilt.jquery.min.js"></script>
+		<script src="js/library/sweetalert.js"></script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+	<div class="header">
+		@section('header')
+	</div>
+	<div class="menubar">
+		@section('menubar')
+			<div id="nav">
+				<ul>
+					<li class=""><a href="{{ url('/') }}">HOME</a></li>
+					<li class=""><a href="/products">PRODUCTS</a></li>
+					<li><a href="/faq">FAQ</a></li>
+					<li><a href="/contact">CONTACT US</a></li>
+						@if (!Auth::guest())
+							<a href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+													 document.getElementById('logout-form').submit();">
+									LOGOUT
+							</a>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									{{ csrf_field() }}
+							</form>
+						@endif
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+						@if( Auth::check())
+							<li class="active"><a href="#">{{ Auth::user()->name }}</a></li>
+						@endif
+				</ul>
+			</div>
+	</div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+  <div class="content">
+      @yield('content')
+  </div>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+	<div class="footer">
+		@section('footer')
+		Bakery Service Center, © 2018 All Right Reserved.
+	</div>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        @yield('content')
-    </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+	<!-- Scripts -->
+	<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
