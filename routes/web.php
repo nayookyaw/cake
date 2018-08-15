@@ -12,10 +12,18 @@
 */
 
 Route::get('/', function () {
-   return view('layouts/cake/master');
+	return view('layouts/cake/master');
 });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/home/summary', 'Admin\HomeController@summary');
+
+Route::get('/admin/home', function() {
+	return view('admin/home');
+});
+
+Route::get('/admin/products', function () {
+	return view('admin/products');
+});

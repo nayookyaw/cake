@@ -12,6 +12,5 @@ class HomeController extends Controller
 	public function summary()
 	{
 		$users = DB::table('users')->get();
-		log::info($users);
 	}
 }

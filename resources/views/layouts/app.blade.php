@@ -24,14 +24,14 @@
 		<link rel="stylesheet" href="/css/logged/master/footer.css">
 
 		<!-- library js  -->
-		<script src="js/library/jquery-3.3.1.js"></script>
-		<script src="js/library/jquery-3.3.1.min.js"></script>
-		<script src="js/library/bootstrap.min.js"></script>
-		<script src="js/library/bootstrap.js"></script>
-		<script src="js/library/tipped.js"></script>
-		<script src="js/library/select2.min.js"></script>
-		<script src="js/library/tilt.jquery.min.js"></script>
-		<script src="js/library/sweetalert.js"></script>
+		<script src="../js/library/jquery-3.3.1.js"></script>
+		<script src="../js/library/jquery-3.3.1.min.js"></script>
+		<script src="../js/library/bootstrap.min.js"></script>
+		<script src="../js/library/bootstrap.js"></script>
+		<script src="../js/library/tipped.js"></script>
+		<script src="../js/library/select2.min.js"></script>
+		<script src="../js/library/tilt.jquery.min.js"></script>
+		<script src="../js/library/sweetalert.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -41,8 +41,8 @@
 		@section('menubar')
 			<div id="nav">
 				<ul>
-					<li class="active"><a href="{{ url('/') }}">HOME</a></li>
-					<li class=""><a href="/products">PRODUCTS</a></li>
+					<li class="active"><a href="{{ url('/admin/home') }}">HOME</a></li>
+					<li class=""><a href="/admin/products">PRODUCTS</a></li>
 					<li class=""><a href="/orders">ORDERS</a></li>
 					<li><a href="/faq">FAQ</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
@@ -77,6 +77,6 @@
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
-	<script src="js/admin/home.js"></script>
+	<script src="../js/admin/home.js"></script>
 </body>
 </html>

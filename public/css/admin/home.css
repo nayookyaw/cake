@@ -12,6 +12,14 @@
 .action .orders {
 	padding: 20px 30px
 }
+.action .products a {
+	text-decoration: none;
+	color: white;
+}
+.action .orders a {
+	text-decoration: none;
+	color: white;
+}
 .content table {
 	width: 100%;
 }
