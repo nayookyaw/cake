@@ -41,9 +41,13 @@
 		@section('menubar')
 			<div id="nav">
 				<ul>
-					<li class="active"><a href="{{ url('/admin/home') }}">HOME</a></li>
+					@if( Auth::check())
+						<li class="active"><a href="{{ url('/logged/home') }}">HOME</a></li>
+					@else
+						<li class="active"><a href="{{ url('/') }}">HOME</a></li>
+					@endif
+
 					<li class=""><a href="/admin/products">PRODUCTS</a></li>
-					<li class=""><a href="/orders">ORDERS</a></li>
 					<li><a href="/faq">FAQ</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
 						@if (!Auth::guest())
@@ -76,7 +80,8 @@
 
 
 	<!-- Scripts -->
+	@yield('js')
 	<script src="{{ asset('js/app.js') }}"></script>
-	<script src="../js/admin/home.js"></script>
+	<!-- <script src="../js/admin/home.js"></script> -->
 </body>
 </html>

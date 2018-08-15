@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.cake.master')
 
 @section('content')
 <br><br><br><br><br>
@@ -68,6 +68,10 @@
                                     Register
                                 </button>
                             </div>
+														<br><br><br><br><br>
+														<div class="col-md-12 text-right">
+															<a href="{{ url('/login') }}"><span class="glyphicon glyphicon-lock"></span> Login</a>
+														</div>
                         </div>
                     </form>
                 </div>

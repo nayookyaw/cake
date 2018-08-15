@@ -1,0 +1,28 @@
+.content {
+	padding: 0 200px;
+}
+.content table {
+	width: 100%;
+}
+.content table tr:hover{
+  cursor: pointer;
+  background-color: #CFE1C0;
+}
+.content table tr th{
+	text-align: center;
+	padding: 10px;
+	color: white;
+	background-color: #336699;
+}
+.content table tr td{
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	max-width:1px;
+	text-align: center;
+	padding: 10px;
+}
+.content .function {
+	text-align: right;
+	padding: 5px;
+}

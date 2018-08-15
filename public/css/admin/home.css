@@ -1,16 +1,19 @@
 .content {
-	padding: 0 150px;
+	padding: 0 200px;
+}
+.content hr {
+	border-bottom: 1px solid;
 }
 .action {
-	padding: 0 200px;
+	padding: 0 32%;
 	margin-bottom: 50px;
 }
 .action .products {
 	padding: 20px 30px;
-	margin-right: 110px;
+	margin-right: 20%;
 }
 .action .orders {
-	padding: 20px 30px
+	padding: 20px 36px
 }
 .action .products a {
 	text-decoration: none;

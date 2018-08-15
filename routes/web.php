@@ -24,6 +24,15 @@ Route::get('/admin/home', function() {
 	return view('admin/home');
 });
 
+///////// Products Menu API
 Route::get('/admin/products', function () {
 	return view('admin/products');
+});
+Route::get('/admin/products/all', 'admin\ProductController@getAll');
+
+Route::get('/admin/product/detail/{product_id}', 'admin\ProductController@getDetail');
+
+///////// Logged User API
+Route::get('/logged/home', function() {
+	return view('logged/home');
 });
