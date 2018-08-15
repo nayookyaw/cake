@@ -25,4 +25,15 @@ class ProductController extends Controller
 
 			return view('/admin/productDetail', compact('product', $product));
 		}
+
+		public function update(Request $inputs)
+		{
+			$product_id = $inputs->get('product_id');
+			$product_name = $inputs->get('product_name');
+			$product_price = $inputs->get('product_price');
+
+			\App\Product::updateOrCreate(['id' => $product_id] , ['name' => $product_name, 'price' => $product_price] );
+
+			return ;
+		}
 }

@@ -32,6 +32,8 @@ Route::get('/admin/products/all', 'admin\ProductController@getAll');
 
 Route::get('/admin/product/detail/{product_id}', 'admin\ProductController@getDetail');
 
+Route::put('/admin/product/update', 'admin\ProductController@update');
+
 ///////// Logged User API
 Route::get('/logged/home', function() {
 	return view('logged/home');

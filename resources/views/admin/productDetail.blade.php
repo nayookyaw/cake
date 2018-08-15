@@ -10,15 +10,19 @@
 		<h3>Product Details</h3>
 
 		<div class="function">
-			<button class="create_product btn btn-danger">Delete</button>
+			<button data-index ="{{ $product->id }}" class="create_product btn btn-danger">Delete</button>
 		</div>
 		<br><br>
 
-		Name <input type="text" value=" {{$product->name}} ">
-		Price <input type="text" value=" {{$product->price}} ">
-		<br><br><br>
-		<button class="update_product btn btn-warning">Update</button>
-
+		<div class="product_detail">
+			Product Name <br><br>
+			<input class="name form-control" type="text" value=" {{$product->name}} ">
+			<br><br><br>
+			Product Price <br><br>
+			<input class="price form-control" type="text" value=" {{$product->price}} ">
+			<br><br><br>
+			<button data-index ="{{ $product->id }}" class="update_product btn btn-warning btn-block">Update</button>
+		</div>
 	</div>
 
 @endsection
