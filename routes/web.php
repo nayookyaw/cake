@@ -34,6 +34,8 @@ Route::get('/admin/product/detail/{product_id}', 'admin\ProductController@getDet
 
 Route::put('/admin/product/update', 'admin\ProductController@update');
 
+Route::delete('/admin/product/delete', 'admin\ProductController@delete');
+
 ///////// Logged User API
 Route::get('/logged/home', function() {
 	return view('logged/home');

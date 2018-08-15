@@ -10,7 +10,7 @@
 		<h3>Product Details</h3>
 
 		<div class="function">
-			<button data-index ="{{ $product->id }}" class="create_product btn btn-danger">Delete</button>
+			<button data-index ="{{ $product->id }}" class="delete_product btn btn-danger">Delete</button>
 		</div>
 		<br><br>
 
