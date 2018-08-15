@@ -23,7 +23,7 @@
 .content table {
 	width: 100%;
 }
-.content table tr td{
+.content table tr th{
 	text-align: center;
 	padding: 10px;
 	color: white;
