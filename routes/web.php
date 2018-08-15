@@ -17,5 +17,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-// Admin Home API
-Route::get('/admin/home', '')
+
+Route::get('/admin/home/summary', 'Admin\HomeController@summary');

@@ -1,0 +1,23 @@
+.content {
+	padding: 0 150px;
+}
+.action {
+	padding: 0 200px;
+	margin-bottom: 50px;
+}
+.action .products {
+	padding: 20px 30px;
+	margin-right: 110px;
+}
+.action .orders {
+	padding: 20px 30px
+}
+.content table {
+	width: 100%;
+}
+.content table tr td{
+	text-align: center;
+	padding: 10px;
+	color: white;
+	background-color: #336699;
+}

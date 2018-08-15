@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+		<link rel="stylesheet" href="/css/admin/home.css">
 
 		<link rel="stylesheet" href="/css/library/bootstrap.css">
 		<link rel="stylesheet" href="/css/library/bootstrap.min.css">
@@ -40,8 +41,9 @@
 		@section('menubar')
 			<div id="nav">
 				<ul>
-					<li class=""><a href="{{ url('/') }}">HOME</a></li>
+					<li class="active"><a href="{{ url('/') }}">HOME</a></li>
 					<li class=""><a href="/products">PRODUCTS</a></li>
+					<li class=""><a href="/orders">ORDERS</a></li>
 					<li><a href="/faq">FAQ</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
 						@if (!Auth::guest())
@@ -57,7 +59,7 @@
 						@endif
 
 						@if( Auth::check())
-							<li class="active"><a href="#">{{ Auth::user()->name }}</a></li>
+							<li class=""><a href="#">{{ Auth::user()->name }}</a></li>
 						@endif
 				</ul>
 			</div>
@@ -75,5 +77,6 @@
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
+	<script src="js/admin/home.js"></script>
 </body>
 </html>
