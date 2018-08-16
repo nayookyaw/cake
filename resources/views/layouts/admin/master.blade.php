@@ -18,6 +18,8 @@
 
 		<link rel="stylesheet" href="/css/library/bootstrap.css">
 		<link rel="stylesheet" href="/css/library/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/library/jquery.modal.css">
+		<link rel="stylesheet" href="/css/library/jquery.modal.min.css">
 		<link rel="stylesheet" href="/css/library/tipped.css">
 
 		<link rel="stylesheet" href="/css/logged/master/main.css">
@@ -28,6 +30,8 @@
 		<!-- library js  -->
 		<script src="../../../js/library/jquery-3.3.1.js"></script>
 		<script src="../../../js/library/jquery-3.3.1.min.js"></script>
+		<script src="../../../js/library/jquery.modal.js"></script>
+		<script src="../../../js/library/jquery.modal.min.js"></script>
 		<script src="../../../js/library/bootstrap.min.js"></script>
 		<script src="../../../js/library/bootstrap.js"></script>
 		<script src="../../../js/library/tipped.js"></script>
@@ -74,7 +78,7 @@
   <div class="content">
       @yield('content')
   </div>
-
+	<br><br><br>
 	<div class="footer">
 		@section('footer')
 		Bakery Service Center, © 2018 All Right Reserved.
@@ -83,9 +87,8 @@
 
 	<!-- Scripts -->
 	@section('js')
-	<!-- @show -->
 	<script src="{{ asset('js/app.js') }}"></script>
 	<script src="../../../js/admin/productDetail.js"></script>
-	<!-- <script src="../js/admin/home.js"></script> -->
+	@show
 </body>
 </html>

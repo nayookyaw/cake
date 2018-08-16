@@ -26,3 +26,11 @@
 	text-align: right;
 	padding: 5px;
 }
+.product_content form .name_error {
+	color:red;
+	font-size: 14px;
+}
+.product_content form .price_error {
+	color:red;
+	font-size: 14px;
+}

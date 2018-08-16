@@ -30,6 +30,12 @@ Route::get('/admin/products', function () {
 });
 Route::get('/admin/products/all', 'admin\ProductController@getAll');
 
+Route::get('/admin/productcreate', function () {
+	return view('admin/productCreate');
+});
+
+Route::post('/admin/products/create', 'admin\ProductController@create');
+
 Route::get('/admin/product/detail/{product_id}', 'admin\ProductController@getDetail');
 
 Route::put('/admin/product/update', 'admin\ProductController@update');

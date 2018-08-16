@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use App\Product;
+use Validator;
 use DB;
 use Log;
 use Auth;
@@ -27,11 +30,44 @@ class ProductController extends Controller
 			return view('/admin/productDetail', compact('product', $product));
 		}
 
+		public function create(Request $inputs)
+		{
+			$product_name = $inputs->get('product_name');
+			$product_price = $inputs->get('product_price');
+			$product_file = $inputs->file('product_file');
+
+			$extension = $product_file->getClientOriginalExtension();
+			Storage::disk('public')->put($product_file->getFilename().'.'.$extension,  File::get($product_file));
+
+			$input_arr = ['product_name' => $product_name, 'product_price' => $product_price];
+
+			$validator = Validator::make($input_arr, [
+				'product_name' => 'required|string|max:255',
+				'product_price' => 'required|int|max:2147483647',
+			]);
+			if ($validator->fails()) { return response()->json($validator->messages(), 400); }
+
+			$product = new \App\Product;
+			$product->name = $product_name;
+			$product->price = $product_price;
+			$product->file_name = $product_file->getFilename().'.'.$extension;
+			$product->save();
+
+		}
+
 		public function update(Request $inputs)
 		{
 			$product_id = $inputs->get('product_id');
 			$product_name = $inputs->get('product_name');
 			$product_price = $inputs->get('product_price');
+
+			$input_arr = ['product_name' => $product_name, 'product_price' => $product_price];
+
+			$validator = Validator::make($input_arr, [
+					'product_name' => 'required|string|max:255',
+					'product_price' => 'required|int|max:2147483647',
+			]);
+			if ($validator->fails()) { return response()->json($validator->messages(), 400); }
 
 			\App\Product::updateOrCreate(['id' => $product_id] , ['name' => $product_name, 'price' => $product_price] );
 

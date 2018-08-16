@@ -4,6 +4,9 @@ deleteProducts();
 
 function updateProducts() {
 	$('.update_product').on('click', function(){
+		$('.name_error').empty();
+		$('.price_error').empty();
+
 		$product_id = $(this).attr('data-index');
 		$product_name = $(".name").val();
 		$product_price = $(".price").val();
@@ -26,8 +29,16 @@ function updateProducts() {
 
 			},
 			error : function (error){
-				$error = error.responseJSON.error;
-				swal({ text: $error });
+				if (error.responseJSON) {
+					if (error.responseJSON.product_name) {
+						$('.name_error').text(error.responseJSON.product_name[0]);
+					}
+
+					if (error.responseJSON.product_price) {
+						$('.price_error').text(error.responseJSON.product_price[0]);
+					}
+				}
+
 			}
 		});
 
