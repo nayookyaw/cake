@@ -16,10 +16,15 @@
 
 		<div class="product_content">
 			<form>
-				<img src="/storage/phpSf0JQ1.jpg" width="200px" height="150px">
-				<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button><br>
-				<input class="file" type="file">
-				<br><br>
+				@if ($product->file_name)
+					<img data-index= "{{ $product->file_name }}" id ="product_img" src="/uploads/{{ $product->file_name }}" width="200px" height="150px">
+				@else
+					<img data-index= "" id ="product_img" src="/uploads/no_image.jpg" width="200px" height="150px">
+				@endif
+
+				<button class="btn_clear_img btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button><br>
+				<input class="file" type="file" class="form-control"/>
+				<br>
 				Product Name <br>
 				<input class="name form-control" type="text" value=" {{$product->name}} ">
 				<span class="name_error"></span>

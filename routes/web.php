@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-	return view('layouts/cake/master');
+	return view('cake/home');
+});
+// Cake Product API
+Route::get('/products', function() {
+	return view('cake/products');
 });
 Auth::routes();
 
@@ -38,10 +42,15 @@ Route::post('/admin/products/create', 'admin\ProductController@create');
 
 Route::get('/admin/product/detail/{product_id}', 'admin\ProductController@getDetail');
 
-Route::put('/admin/product/update', 'admin\ProductController@update');
+Route::post('/admin/product/update', 'admin\ProductController@update');
 
 Route::delete('/admin/product/delete', 'admin\ProductController@delete');
 
+
+// Orders Menu API
+Route::get('/admin/orders', function () {
+	return view('admin/orders');
+});
 ///////// Logged User API
 Route::get('/logged/home', function() {
 	return view('logged/home');

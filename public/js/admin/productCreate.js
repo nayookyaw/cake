@@ -1,5 +1,6 @@
 
 addProducts();
+previewImage();
 
 function addProducts() {
 	$(".create_product").click(function (e) {
@@ -30,6 +31,12 @@ function addProducts() {
 				setTimeout(function(){ window.location = "/admin/products" }, 2000);
 			},
 			error : function (error){
+				if (error.status == 500) {
+					swal("Invalid Inputs, Too Large Size", {
+						buttons: false,
+						timer: 1000,
+					});
+				}
 				if (error.responseJSON) {
 					if (error.responseJSON.product_name) {
 						$('.name_error').text(error.responseJSON.product_name[0]);
@@ -38,9 +45,31 @@ function addProducts() {
 					if (error.responseJSON.product_price) {
 						$('.price_error').text(error.responseJSON.product_price[0]);
 					}
+
+					if (error.responseJSON.product_file) {
+						$('.file_error').text(error.responseJSON.product_file[0]);
+					}
 				}
 
 			}
 		});
 	});
+}
+
+function previewImage() {
+	$(".file").change(function() {
+		$(".img_preview").empty().append("<img id ='product_img' width='80%' height='40%'>&nbsp;&nbsp;<button class='btn_clear_img btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button>");
+	  readImage(this);
+	});
+}
+
+function readImage(input) {
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $('#product_img').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
 }

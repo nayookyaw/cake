@@ -14,7 +14,7 @@
 				Product Name <br>
 				<input class="name form-control" type="text" autofocus>
 				<span class="name_error"></span>
-				<br><br><br>
+				<br><br>
 				Product Price <br>
 				<input class="price form-control" type="text"/>
 				<span class="price_error"></span>
@@ -22,8 +22,13 @@
 				Upload a image <br>
 				<input class="file" type="file" class="form-control"/>
 				<span class="file_error"></span>
-				<br><br>
-				<input type="button" class="create_product btn btn-success btn-block" value="Add">
+				<br>
+				<input type="button" class="create_product btn btn-success btn-block" value="Add"><br>
+				<div class="img_preview">
+
+				</div>
+				<!-- <img id ="product_img" width="200px" height="150px">
+				<button class="btn_clear_img btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button> -->
 
 			</form>
 		</div>

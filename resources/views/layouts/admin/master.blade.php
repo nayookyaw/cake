@@ -54,7 +54,7 @@
 					@endif
 
 					<li class=""><a href="/admin/products">PRODUCTS</a></li>
-					<li class=""><a href="/orders">ORDERS</a></li>
+					<li class=""><a href="/admin/orders">ORDERS</a></li>
 					<li><a href="/faq">FAQ</a></li>
 						@if (!Auth::guest())
 							<a href="{{ route('logout') }}"
@@ -69,7 +69,7 @@
 						@endif
 
 						@if( Auth::check())
-							<li class=""><a href="#">{{ Auth::user()->name }}</a></li>
+							<li class="user"><a href="#">{{ Auth::user()->name }}</a></li>
 						@endif
 				</ul>
 			</div>

@@ -8,9 +8,12 @@
 			<link rel="shortcut icon" href="img/icon/icon.ico" />
 
 			<!-- library css  -->
+			@section('css')
+			@show
 			<link rel="stylesheet" href="/css/library/bootstrap.css">
 			<link rel="stylesheet" href="/css/library/bootstrap.min.css">
 			<link rel="stylesheet" href="/css/library/tipped.css">
+			<link rel="stylesheet" href="/css/common/common.css">
 
 			<link rel="stylesheet" href="/css/cake/master/main.css">
 			<link rel="stylesheet" href="/css/cake/master/header.css">
@@ -26,6 +29,8 @@
 			<script src="js/library/select2.min.js"></script>
 			<script src="js/library/tilt.jquery.min.js"></script>
 			<script src="js/library/sweetalert.js"></script>
+			<script src="js/library/jquery.paginate.js"></script>
+			<script src="js/library/jquery.paginate.min.js"></script>
 
     </head>
     <body>
@@ -38,7 +43,7 @@
 						<ul>
 							<li class="active"><a href="/">HOME</a></li>
 							<li class=""><a href="/products">PRODUCTS</a></li>
-							<li class=""><a href="/faq">FAQ</a></li>
+							<li class=""><a href="/Orders">Orders</a></li>
 							<li><a href="/contact">CONTACT US</a></li>
 							@if (Auth::check())
 									<li><a href="{{ url('/home') }}">LOGIN</a></li>
@@ -58,6 +63,9 @@
 				@section('footer')
 				Bakery Service Center, © 2018 All Right Reserved.
 			</div>
+			@section('js')
+			<script src="{{ asset('js/app.js') }}"></script>
+			@show
     </body>
 
 </html>

@@ -6,19 +6,15 @@
 
 @section('content')
 <br>
-	<h3>Product Lists</h3>
-
-	<div class="function">
-		<a href="/admin/productcreate"><button class="create_product btn btn-success">Add</button></a>
-	</div>
+	<h3>Order Lists</h3>
 
 	<br>
-	<table id="product_table" number-per-page="10" current-page="0">
+	<table id="order_table" number-per-page="10" current-page="0">
 		<thead>
 			<tr>
-				<th>Product Code</th>
-				<th>Product Name</th>
-				<th>Price</th>
+				<th>Order Code</th>
+				<th>Customer Name</th>
+				<th>Total</th>
 				<th>Last Updated</th>
 				<th>Action</th>
 			</tr>
@@ -29,6 +25,6 @@
 @endsection
 
 @section('js')
-	<script src="../js/admin/products.js"></script>
+	<script src="../js/admin/orders.js"></script>
 	<script src="../js/library/simplepagination.js"></script>
 @endsection
