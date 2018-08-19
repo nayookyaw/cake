@@ -1,8 +1,23 @@
 .product_lists {
-	background-color: red;
+	/* background-color: red; */
 }
 .product_lists ul {
-	-webkit-column-count: 5; /* Chrome, Safari, Opera */
-	-moz-column-count: 5; /* Firefox */
-	column-count: 5;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+	-moz-column-count: 2; /* Firefox */
+	column-count: 2;
+}
+.customPagination, .paginacaoCursor{
+	margin: 20px 5px;
+	padding: 5px 8px;
+	color: #fff;
+	background: #880e4f;
+	cursor: pointer;
+}
+.content table tr:hover{
+  cursor: auto !important;
+  background-color: white !important;
+}
+.product_lists h4 {
+	/* background-color: #CFE1C0; */
+	color: #FA5882;
 }

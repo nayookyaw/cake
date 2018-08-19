@@ -27,6 +27,7 @@ Route::get('/admin/home/summary', 'Admin\HomeController@summary');
 Route::get('/admin/home', function() {
 	return view('admin/home');
 });
+Route::get('/cake/products/all', 'Cake\CakeProductController@getAll');
 
 ///////// Products Menu API
 Route::get('/admin/products', function () {

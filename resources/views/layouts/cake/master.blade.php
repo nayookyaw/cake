@@ -29,8 +29,7 @@
 			<script src="js/library/select2.min.js"></script>
 			<script src="js/library/tilt.jquery.min.js"></script>
 			<script src="js/library/sweetalert.js"></script>
-			<script src="js/library/jquery.paginate.js"></script>
-			<script src="js/library/jquery.paginate.min.js"></script>
+			<script src="js/library/HZpagination.js"></script>
 
     </head>
     <body>
@@ -43,7 +42,7 @@
 						<ul>
 							<li class="active"><a href="/">HOME</a></li>
 							<li class=""><a href="/products">PRODUCTS</a></li>
-							<li class=""><a href="/Orders">Orders</a></li>
+							<li class=""><a href="/Orders">ORDERS</a></li>
 							<li><a href="/contact">CONTACT US</a></li>
 							@if (Auth::check())
 									<li><a href="{{ url('/home') }}">LOGIN</a></li>
@@ -57,6 +56,7 @@
 
       <div class="content">
           @yield('content')
+					<br><br><br><br>
       </div>
 
 			<div class="footer">
