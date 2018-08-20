@@ -1,6 +1,7 @@
 
 getProducts();
-$product_ids = ['1'];
+$product_ids = [];
+
 function getProducts() {
 	$.ajax({
 		url : '/logged/products/all',
@@ -12,6 +13,7 @@ function getProducts() {
 			$("tbody").append(result);
 			setPaging();
 			addToOrder();
+			disabledClick();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
@@ -24,15 +26,36 @@ function setPaging() {
 	$("#product_table").pagination();
 }
 
+function disabledClick() {
+	$(".name,.price, .description, .img").click(function (){
+		return false;
+	});
+}
+
 function addToOrder() {
-	$(".btn_buy").click(function (){
-		$("#product_table tr").click(function(){
+		$("#product_table tr").click(function(e){
+			e.preventDefault();
 			$id = $(this).attr('data-index');
       $name = $(this).find("h4").text();
 			$price = $(this).find(".price").text();
 
-			// $("#order_form").append("<label class='name'>#{$name}</label><label class='qty'><input type='number' value='1' style='width:2.5em'/></label><label class='price'>2000</label><label class='total'>Total</label>");
+			$.ajax({
+				url : '/logged/products/addOrder',
+				method : 'post',
+				data : {
+					'_token' : $('meta[name="_token"]').attr('content'),
+					'id' : $id,
+					'name' : $name,
+					'price' : $price
+				},
+				success : function (result) {
+					console.log("Added Order lists");
+				},
+				error : function (error){
+					$error = error.responseJSON.error;
+					swal({ text: $error });
+				}
+			});
 
     });
-	});
 }

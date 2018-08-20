@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="_token" content="{{ csrf_token() }}">
 
     <title>Bakery Service Platform</title>
 
@@ -51,6 +51,7 @@
 					@endif
 
 					<li class=""><a href="/logged/products">PRODUCTS</a></li>
+					<li><a href="/logged/orders">ORDERS</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
 						@if (!Auth::guest())
 							<a href="{{ route('logout') }}"

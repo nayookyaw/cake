@@ -1,10 +1,14 @@
+.total_summary {
+	text-align: right;
+	font-weight: bold;
+}
+.total_summary .summary {
+	color: red;
+	font-size: 15px;
+}
 .content table tr:hover{
   cursor: auto !important;
   background-color: white !important;
-}
-.product_lists h4 {
-	/* background-color: #CFE1C0; */
-	/* color: #FA5882; */
 }
 .content ul {
   list-style: none;

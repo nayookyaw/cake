@@ -3,12 +3,12 @@
 @endif
 @foreach( $products as $product)
 		<tr data-index = "{{ $product->id }}">
-			<td><h4>{{ $product->name }}</h4></td>
-			<td><img src="/uploads/{{ $product->file_name }}" width="150px" height="100px"/></td>
-			<td class="price">Price</td>
-			<td>Description</td>
+			<td class="name"><h4>{{ $product->name }}</h4></td>
+			<td class="img"><img src="/uploads/{{ $product->file_name }}" width="150px" height="100px"/></td>
+			<td class="price">{{ $product->price }}</td>
+			<td class="description">{{ $product->description }}</td>
 			@if (Auth::check())
-				<td><button class="btn_buy btn btn-info btn-xs">Buy</button></td>
+				<td><button class="btn_buy btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span>Add to Order</button></td>
 			@endif
 		</tr>
 @endforeach

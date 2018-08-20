@@ -59,4 +59,14 @@ Route::get('/logged/home', function() {
 Route::get('/logged/products', function() {
 	return view('logged/products');
 });
-Route::get('/logged/products/all', 'logged\LoggedController@getAll');
+Route::get('/logged/products/all', 'logged\LoggedProductController@getAll');
+
+Route::post('/logged/products/addOrder', 'logged\LoggedProductController@addOrder');
+
+Route::get('/logged/orders', function () {
+	return view('logged/orders');
+});
+
+Route::get('/logged/orders/tmp/all', 'logged\LoggedOrderController@getOrderTmp');
+
+Route::delete('/logged/orders/tmp/delete', 'logged\LoggedOrderController@deleteTempOrder');
