@@ -1,18 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Cake;
+namespace App\Http\Controllers\logged;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
-use Log;
 
-class CakeProductController extends Controller
+class LoggedController extends Controller
 {
 	public function getAll(Request $inputs)
 	{
 		$products = DB::table('products')->orderBy('updated_at', 'desc')->get();
 
-		return view('/tmp/cakeProductTmpl', compact('products', $products));
+		return view('/tmp/loggedProductTmpl', compact('products', $products));
 	}
 }

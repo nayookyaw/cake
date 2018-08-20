@@ -19,6 +19,10 @@
 				<input class="price form-control" type="text"/>
 				<span class="price_error"></span>
 				<br><br>
+				Product Description <br>
+				<input class="description form-control" type="text"/>
+				<span class="description_error"></span>
+				<br><br>
 				Upload a image <br>
 				<input class="file" type="file" class="form-control"/>
 				<span class="file_error"></span>

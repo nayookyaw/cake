@@ -34,6 +34,7 @@ class ProductController extends Controller
 		{
 			$product_name = $inputs->get('product_name');
 			$product_price = $inputs->get('product_price');
+			$product_description = $inputs->get('product_description');
 			$product_file = $inputs->file('product_file');
 
 			$input_arr = ['product_name' => $product_name, 'product_price' => $product_price];
@@ -52,6 +53,7 @@ class ProductController extends Controller
 			$product = new \App\Product;
 			$product->name = $product_name;
 			$product->price = $product_price;
+			$product->description = $product_description;
 			if ($product_file) { $product->file_name = $product_file->getFilename().'.'.$extension; }
 			$product->save();
 
@@ -63,6 +65,7 @@ class ProductController extends Controller
 			$product_img = $inputs->get('product_img');
 			$product_name = $inputs->get('product_name');
 			$product_price = $inputs->get('product_price');
+			$product_description = $inputs->get('product_description');
 			$product_file = $inputs->file('product_file');
 
 			$input_arr = ['product_id' => $product_id, 'product_name' => $product_name, 'product_price' => $product_price];
@@ -81,7 +84,8 @@ class ProductController extends Controller
 			} else {
 				$file_flg = $product_img;
 			}
-			\App\Product::updateOrCreate(['id' => $product_id] , ['name' => $product_name, 'price' => $product_price, 'file_name' => $file_flg] );
+			log::info($product_description);
+			\App\Product::updateOrCreate(['id' => $product_id] , ['name' => $product_name, 'price' => $product_price, 'description'=> $product_description, 'file_name' => $file_flg] );
 
 			return ;
 		}

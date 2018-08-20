@@ -19,6 +19,7 @@
 				<th>Product Code</th>
 				<th>Product Name</th>
 				<th>Price</th>
+				<th>Description</th>
 				<th>Last Updated</th>
 				<th>Action</th>
 			</tr>

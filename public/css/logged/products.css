@@ -1,3 +1,17 @@
+.add_to_orders {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 276px;
+	background-color: white;
+	text-align: center;
+}
+.add_to_orders h5 {
+	color: red;
+}
+#order_form label {
+	border-right: 1px solid;
+}
 .product_lists {
 	/* background-color: red; */
 }
@@ -7,7 +21,7 @@
 }
 .product_lists h4 {
 	/* background-color: #CFE1C0; */
-	color: #FA5882;
+	/* color: #FA5882; */
 }
 .content ul {
   list-style: none;

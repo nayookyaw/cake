@@ -13,6 +13,7 @@ function updateProducts() {
 		$product_img = $("#product_img").attr('data-index');
 		$product_name = $(".name").val();
 		$product_price = $(".price").val();
+		$product_description = $(".description").val();
 		$product_file = $(".file")[0].files[0];
 
 		var form_data = new FormData();
@@ -20,6 +21,7 @@ function updateProducts() {
 		form_data.append('product_img', $product_img)
 		form_data.append('product_name', $product_name)
 		form_data.append('product_price', $product_price)
+		form_data.append('product_description', $product_description)
 		form_data.append('_token', $('meta[name="_token"]').attr('content'))
 		form_data.append('product_file' , $product_file);
 

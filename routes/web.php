@@ -56,3 +56,7 @@ Route::get('/admin/orders', function () {
 Route::get('/logged/home', function() {
 	return view('logged/home');
 });
+Route::get('/logged/products', function() {
+	return view('logged/products');
+});
+Route::get('/logged/products/all', 'logged\LoggedController@getAll');

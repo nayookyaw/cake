@@ -33,6 +33,10 @@
 				<input class="price form-control" type="text" value=" {{$product->price}} ">
 				<span class="price_error"></span>
 				<br><br>
+				Product Description <br>
+				<input class="description form-control" type="text" value=" {{$product->description}} ">
+				<span class="description_error"></span>
+				<br><br>
 				<button type="button" data-index ="{{ $product->id }}" class="update_product btn btn-warning btn-block">Update</button>
 			</form>
 		</div>

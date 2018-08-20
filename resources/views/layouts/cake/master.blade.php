@@ -42,8 +42,8 @@
 						<ul>
 							<li class="active"><a href="/">HOME</a></li>
 							<li class=""><a href="/products">PRODUCTS</a></li>
-							<li class=""><a href="/Orders">ORDERS</a></li>
 							<li><a href="/contact">CONTACT US</a></li>
+							<li><a href="/about">ABOUT US</a></li>
 							@if (Auth::check())
 									<li><a href="{{ url('/home') }}">LOGIN</a></li>
 							@else

@@ -11,8 +11,11 @@
     <title>Bakery Service Platform</title>
 
     <!-- Styles -->
+		@section('css')
+		@show
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 		<link rel="stylesheet" href="/css/admin/home.css">
+		<link rel="stylesheet" href="/css/common/common.css">
 
 		<link rel="stylesheet" href="/css/library/bootstrap.css">
 		<link rel="stylesheet" href="/css/library/bootstrap.min.css">
@@ -47,8 +50,7 @@
 						<li class="active"><a href="{{ url('/') }}">HOME</a></li>
 					@endif
 
-					<li class=""><a href="/admin/products">PRODUCTS</a></li>
-					<li><a href="/faq">FAQ</a></li>
+					<li class=""><a href="/logged/products">PRODUCTS</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
 						@if (!Auth::guest())
 							<a href="{{ route('logout') }}"
@@ -71,6 +73,7 @@
 
   <div class="content">
       @yield('content')
+			<br><br><br><br>
   </div>
 
 	<div class="footer">
@@ -80,8 +83,9 @@
 
 
 	<!-- Scripts -->
-	@yield('js')
+	@section('js')
 	<script src="{{ asset('js/app.js') }}"></script>
+	@show
 	<!-- <script src="../js/admin/home.js"></script> -->
 </body>
 </html>

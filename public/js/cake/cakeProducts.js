@@ -9,7 +9,7 @@ function getProducts() {
 			'_token' : $('meta[name="_token"]').attr('content')
 		},
 		success : function (result) {
-			$("tbody").append(result);
+			$("tbody").empty().append(result);
 			setPaging();
 		},
 		error : function (error){
