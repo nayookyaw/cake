@@ -1,5 +1,4 @@
 getOrdersTmp();
-$product_ids = [];
 
 function getOrdersTmp() {
 	$.ajax({
@@ -9,17 +8,66 @@ function getOrdersTmp() {
 			'_token' : $('meta[name="_token"]').attr('content')
 		},
 		success : function (result) {
-			$("tbody").append(result);
-			setPaging();
+			$("tbody").empty().append(result);
 			calculateSummaryTotal();
 			calculateTotal();
 			calculateWhenChange();
 			deleteOrder();
+			saveOrder();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
 			swal({ text: $error });
 		}
+	});
+}
+
+function saveOrder() {
+	$(".btn_submit").click(function (){
+		if ($('.summary').text() == 0 ) {
+			swal({ text: "Empty Order Lists" });
+			return
+		}
+		$current_arr = [];
+		$order_arr = [];
+		$current_tmp = {};
+
+		$('#order_table tr').each(function() {
+			$current_product_id = $(this).closest('tr').attr('data-index');
+			$current_qty = $(this).find(".qty input[type='number']").val();
+			$current_total = $(this).find(".total").text();
+			$current_arr = [];
+			if($current_product_id || $current_qty || $current_total) {
+				$current_tmp = {
+					product_id : $current_product_id,
+					qty : $current_qty,
+					total : $current_total
+				}
+			}
+			$current_arr.push($current_tmp);
+			$order_arr.push($current_arr);
+		});
+
+		$.ajax({
+			url : '/logged/orders/tmp/save',
+			method : 'post',
+			data : {
+				'orders' : $order_arr,
+				'_token' : $('meta[name="_token"]').attr('content')
+			},
+			success : function (result) {
+				swal("Sucessful Order", {
+					buttons: false,
+					timer: 1000,
+				});
+				setTimeout(function(){ window.location = "/logged/orders/detail" }, 2000);
+			},
+			error : function (error){
+				$error = error.responseJSON;
+				swal({ text: $error });
+			}
+		});
+
 	});
 }
 

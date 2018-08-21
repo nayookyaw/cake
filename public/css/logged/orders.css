@@ -1,10 +1,19 @@
+.content h2{
+	color: red;
+}
 .total_summary {
-	text-align: right;
+	text-align: left;
 	font-weight: bold;
 }
 .total_summary .summary {
 	color: red;
 	font-size: 15px;
+}
+.submit_order {
+	float: right;
+}
+.export_order {
+	float: right;
 }
 .content table tr:hover{
   cursor: auto !important;

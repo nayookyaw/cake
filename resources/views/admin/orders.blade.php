@@ -12,10 +12,8 @@
 	<table id="order_table" number-per-page="10" current-page="0">
 		<thead>
 			<tr>
-				<th>Order Code</th>
 				<th>Customer Name</th>
-				<th>Total</th>
-				<th>Last Updated</th>
+				<th>Order Date</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -25,6 +23,6 @@
 @endsection
 
 @section('js')
-	<script src="../js/admin/orders.js"></script>
+	<script src="../js/admin/adminOrders.js"></script>
 	<script src="../js/library/simplepagination.js"></script>
 @endsection

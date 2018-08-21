@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Admin API Collections
 Route::get('/admin/home/summary', 'Admin\HomeController@summary');
 
 Route::get('/admin/home', function() {
@@ -52,8 +53,13 @@ Route::delete('/admin/product/delete', 'admin\ProductController@delete');
 Route::get('/admin/orders', function () {
 	return view('admin/orders');
 });
+
+Route::get('/admin/orders/all', 'admin\AdminOrderController@getAllOrder');
+
+// End of Login API /////////
+
 ///////// Logged User API
-Route::get('/logged/home', function() {
+Route::get('/logged/home', function () {
 	return view('logged/home');
 });
 Route::get('/logged/products', function() {
@@ -70,3 +76,13 @@ Route::get('/logged/orders', function () {
 Route::get('/logged/orders/tmp/all', 'logged\LoggedOrderController@getOrderTmp');
 
 Route::delete('/logged/orders/tmp/delete', 'logged\LoggedOrderController@deleteTempOrder');
+
+Route::post('/logged/orders/tmp/save', 'logged\LoggedOrderController@saveOrder');
+
+Route::get('/logged/orders/detail', function () {
+	return view('logged/orderDetail');
+});
+
+Route::get('/logged/orders/all', 'logged\LoggedOrderController@getAllOrder');
+
+Route::get('/logged/orders/export/{total_amount}', 'logged\LoggedOrderController@orderExport');

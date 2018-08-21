@@ -11,6 +11,6 @@ class Order extends Model
 	public $timestamps = true;
 
 	protected $fillable = [
-			// 'name', 'price', 'file_name',
+			'user_id', 'product_id', 'product_qty', 'total',
 	];
 }

@@ -20,7 +20,7 @@
 				<th>Product Name</th>
 				<th>Price</th>
 				<th>Description</th>
-				<th>Last Updated</th>
+				<th>Updated Date</th>
 				<th>Action</th>
 			</tr>
 		</thead>

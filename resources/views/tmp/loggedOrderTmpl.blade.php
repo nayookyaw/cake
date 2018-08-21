@@ -1,4 +1,6 @@
-
+@if(count($order_tmps) == 0)
+	<tr><td colspan="5">There is no current lists</td></tr>
+@endif
 @foreach($order_tmps as $order_tmp)
 		<tr data-index="{{ $order_tmp->product_id }}">
 			<td>{{ $order_tmp->product_name }}</td>

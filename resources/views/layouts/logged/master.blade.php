@@ -27,14 +27,14 @@
 		<link rel="stylesheet" href="/css/logged/master/footer.css">
 
 		<!-- library js  -->
-		<script src="../js/library/jquery-3.3.1.js"></script>
-		<script src="../js/library/jquery-3.3.1.min.js"></script>
-		<script src="../js/library/bootstrap.min.js"></script>
-		<script src="../js/library/bootstrap.js"></script>
-		<script src="../js/library/tipped.js"></script>
-		<script src="../js/library/select2.min.js"></script>
-		<script src="../js/library/tilt.jquery.min.js"></script>
-		<script src="../js/library/sweetalert.js"></script>
+		<script src="../../js/library/jquery-3.3.1.js"></script>
+		<script src="../../js/library/jquery-3.3.1.min.js"></script>
+		<script src="../../js/library/bootstrap.min.js"></script>
+		<script src="../../js/library/bootstrap.js"></script>
+		<script src="../../js/library/tipped.js"></script>
+		<script src="../../js/library/select2.min.js"></script>
+		<script src="../../js/library/tilt.jquery.min.js"></script>
+		<script src="../../js/library/sweetalert.js"></script>
 </head>
 <body>
 	<div class="header">

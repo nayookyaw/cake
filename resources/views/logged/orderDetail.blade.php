@@ -1,23 +1,23 @@
 @extends('layouts.logged.master')
 
 @section('css')
-	<link rel="stylesheet" href="../css/logged/orders.css">
+	<link rel="stylesheet" href="../../css/logged/orders.css">
 @endsection
 
 @section('content')
-<br><br>
+<br>
+	<h2> Order Lists </h2><br>
 	<div class="content">
+
 		<div class="order_lists">
 			<span class="total_summary">
 				The Total Amount :
 				<span class="summary"></span>&nbsp;kyats
 			</span>
-			<span class="submit_order">
-				<a href="/logged/orders/detail"><button class="order_lists btn btn-warning">Order Lists</button></a>&nbsp;&nbsp;
-				<button class="btn_submit btn btn-success btn-sm">Submit</button><br>
+			<span class="export_order">
+				<a href=""><button class="btn_export_order btn btn-success">Export</button></a>
 			</span>
-			<br>
-			<br>
+			<br><br><br>
 			<table id="order_table" number-per-page="5" current-page="0">
 				<thead>
 					<tr>
@@ -25,7 +25,7 @@
 						<th>Qty</th>
 						<th>Price</th>
 						<th>Total</th>
-						<th>Action</th>
+						<th>Order Date</th>
 					</tr>
 				</thead>
 				<tbody></tbody>
@@ -36,6 +36,6 @@
 @endsection
 
 @section('js')
-	<script src="../js/logged/loggedOrders.js"></script>
-	<script src="../js/library/simplepagination.js"></script>
+	<script src="../../js/logged/loggedOrdersDetail.js"></script>
+	<script src="../../js/library/simplepagination.js"></script>
 @endsection
