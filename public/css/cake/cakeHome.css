@@ -1,0 +1,21 @@
+.product_body {
+	padding: 0 45px;
+	color: red;
+}
+
+
+.hvrbox .hvrbox-layer_rotate {
+	border-radius: 50%;
+	-moz-transform: rotateZ(0);
+	-webkit-transform: rotateZ(0);
+	-ms-transform: rotateZ(0);
+	transform: rotateZ(0);
+}
+.hvrbox:hover .hvrbox-layer_rotate,
+.hvrbox.active .hvrbox-layer_rotate {
+	border-radius: 0%;
+	-moz-transform: rotateZ(360deg);
+	-webkit-transform: rotateZ(360deg);
+	-ms-transform: rotateZ(360deg);
+	transform: rotateZ(360deg);
+}

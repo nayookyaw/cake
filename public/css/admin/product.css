@@ -1,9 +1,17 @@
 /* Product */
-h3 {
+.content h3 {
 	color:red;
 }
-
-
+.close_order {
+	float: right;
+}
+.summary {
+	color: red;
+}
+.user {
+	font-size: 15px;
+	font-weight: bold;
+}
 /* Product Detail */
 .product_content {
 	padding: 0 170px;

@@ -18,6 +18,13 @@ Route::get('/', function () {
 Route::get('/products', function() {
 	return view('cake/products');
 });
+
+Route::get('/cake/products/search', 'Cake\CakeProductController@searchAll');
+
+Route::get('/cake/products/search/price', 'Cake\CakeProductController@searchPrice');
+
+Route::get('/cake/home/products', 'Cake\CakeHomeController@getNewProduct');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -55,6 +62,10 @@ Route::get('/admin/orders', function () {
 });
 
 Route::get('/admin/orders/all', 'admin\AdminOrderController@getAllOrder');
+
+Route::get('/admin/orders/detail/{user_id}', 'admin\AdminOrderController@getOrderDetail');
+
+Route::delete('/admin/orders/close', 'admin\AdminOrderController@closeOrder');
 
 // End of Login API /////////
 

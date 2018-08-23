@@ -24,7 +24,7 @@ function exportOrderList() {
 	$(".btn_export_order").click(function (e){
 		e.preventDefault();
 
-		if ($('.summary').text() == 0 ) {
+		if ($('.summary').text() <= 0 ) {
 			swal({ text: "Empty Order Lists" });
 			return
 		}
