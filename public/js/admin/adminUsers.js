@@ -1,4 +1,5 @@
 
+setPaging();
 $('[data-toggle="tooltip"]').tooltip();
 
 $("tr").click(function (){
@@ -11,3 +12,7 @@ $("tr").click(function (){
 		theme: $.sweetModal.THEME_DARK
 	});
 });
+
+function setPaging() {
+	$("#user_table").pagination();
+}

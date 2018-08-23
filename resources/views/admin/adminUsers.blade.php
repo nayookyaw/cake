@@ -34,6 +34,6 @@
 @endsection
 
 @section('js')
-	<script src="../js/admin/adminUsers.js"></script>
 	<script src="../js/library/simplepagination.js"></script>
+	<script src="../js/admin/adminUsers.js"></script>
 @endsection
