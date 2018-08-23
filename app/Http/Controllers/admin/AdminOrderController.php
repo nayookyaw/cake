@@ -18,7 +18,6 @@ class AdminOrderController extends Controller
 								->select('orders.user_id as user_id', 'users.name as user_name')
 								->distinct('user_id')
 								->get();
-								log::info($orders);
 		return view('/tmp/adminOrderTmpl', compact('orders', $orders));
 	}
 }

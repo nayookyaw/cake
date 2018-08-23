@@ -8,7 +8,7 @@
 			<td class="price">{{ $product->price }}</td>
 			<td class="description">{{ $product->description }}</td>
 			@if (Auth::check())
-				<td><button class="btn_buy btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span>Add to Order</button></td>
+				<td><button class="btn_buy btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span>Add to Cart</button></td>
 			@endif
 		</tr>
 @endforeach
