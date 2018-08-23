@@ -6,6 +6,6 @@
 	<tr>
 		<td>{{ $order->user_name }}</td>
 		<td>{{ $order->updated_at }}</td>
-		<td><button class="btn_order_detail btn btn-warning">Detail</button></td>
+		<td><a href="/admin/orders/detail/{{ $order->user_id }}"<button class="btn_order_detail btn btn-warning">Detail</button></td>
 	</tr>
 @endforeach

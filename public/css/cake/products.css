@@ -1,5 +1,10 @@
-.product_lists {
-	/* background-color: red; */
+.from_price {
+	width: 200px;
+	float: left;
+}
+.to_price {
+	width: 200px;
+	float: left;
 }
 .content table tr:hover{
   cursor: auto !important;

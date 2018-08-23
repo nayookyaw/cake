@@ -24,8 +24,8 @@ function getOrdersTmp() {
 
 function saveOrder() {
 	$(".btn_submit").click(function (){
-		if ($('.summary').text() == 0 ) {
-			swal({ text: "Empty Order Lists" });
+		if ($('.summary').text() <= 0 ) {
+			swal({ text: "Empty Order Lists or Invalid" });
 			return
 		}
 		$current_arr = [];
@@ -101,6 +101,15 @@ function calculateWhenChange() {
 	$("#order_table tr .qty input[type='number']").click(function(e){
 		calculateSummaryTotal();
 	});
+
+	$("#order_table tr .qty input[type='number']").on('change', function () {
+		$current_qty = $(this).val();
+		$current_price = $(this).parent().parent().find(".price").text();
+		$current_total = $current_qty * $current_price;
+
+		$(this).parent().parent().find(".total").text($current_total);
+		calculateSummaryTotal();
+});
 }
 
 function calculateSummaryTotal() {
@@ -134,7 +143,7 @@ function sum(input){
     }
 
 function calculateTotal() {
-	$("#order_table tr .qty input[type='number']").click(function(e){
+	$("#order_table tr .qty input[type='number']").on('click', function(e){
 		$current_qty = $(this).val();
 		$current_price = $(this).parent().parent().find(".price").text();
 		$current_total = $current_qty * $current_price;

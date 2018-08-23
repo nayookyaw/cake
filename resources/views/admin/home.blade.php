@@ -6,7 +6,6 @@
 
 @section('content')
 <br><br><br><br>
-<div class="content">
 	<h4>TOP</h4>
 	<hr/>
 	<div class="action">
