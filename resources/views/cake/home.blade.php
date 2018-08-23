@@ -16,14 +16,14 @@
 		<img src="" width="180px" height="300px"> &nbsp;
 	</div>
 
-	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-    <div class="hovereffect">
-        <img class="img-responsive" src="http://placehold.it/350x200" alt="">
-        <div class="overlay">
-           <h2>Hover effect 1v2</h2>
-           <a class="info" href="#">link here</a>
-        </div>
-    </div>
+
+<div class="hvrbox">
+	<img src="img/photos/photo1.jpg" alt="Mountains" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top hvrbox-layer_rotate">
+		<div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+	</div>
+</div>
+
 </div>
 @endsection
 
