@@ -82,6 +82,13 @@ class LoggedOrderController extends Controller
 					$order->total = $total;
 					$order->save();
 
+					$order_history = new \App\OrderHistory;
+					$order_history->user_id = $user_id;
+					$order_history->product_id = $product_id;
+					$order_history->product_qty = $product_qty;
+					$order_history->total = $total;
+					$order_history->save();
+
 					DB::table('orders_temps')->where('user_id', '=', $user_id)->delete();
 				}
 			}

@@ -16,8 +16,10 @@ class AdminOrderController extends Controller
 		$orders = DB::table('orders')
 								->leftjoin('users', 'orders.user_id', '=', 'users.id')
 								->select('orders.user_id as user_id', 'orders.updated_at as updated_at', 'users.name as user_name')
-								->distinct('user_id')
 								->get();
+
+		$orders = $orders->unique('user_id');
+		$orders->values()->all();
 		return view('/tmp/adminOrderTmpl', compact('orders', $orders));
 	}
 

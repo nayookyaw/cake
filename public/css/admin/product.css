@@ -5,6 +5,17 @@
 .close_order {
 	float: right;
 }
+#search_name {
+	border: none;
+	border-bottom: 1px dashed ;
+}
+.btn_search_date {
+	float: right;
+}
+.cash_summary {
+	float: right;
+	font-weight: bold;
+}
 .summary {
 	color: red;
 }

@@ -67,7 +67,24 @@ Route::get('/admin/orders/detail/{user_id}', 'admin\AdminOrderController@getOrde
 
 Route::delete('/admin/orders/close', 'admin\AdminOrderController@closeOrder');
 
-// End of Login API /////////
+// Cash API Collections /////////
+Route::get('/admin/cash', function() {
+	return view('admin/cash');
+});
+Route::get('/admin/orders/history/all', 'admin\AdminOrderHistoryController@getAllOrderHistories');
+
+Route::get('admin/cash/detail/{user_id}', 'admin\AdminOrderHistoryController@getOrderByUserId');
+
+Route::get('/admin/cash/date', 'admin\AdminOrderHistoryController@getOrderByDate');
+
+Route::get('/admin/cash/date/all', 'admin\AdminOrderHistoryController@getOrderByDateAll');
+
+Route::get('/admin/cash/search/name', 'admin\AdminOrderHistoryController@getOrderByName');
+
+////// End Cash API ////////////
+
+/////// Start User API ///////
+Route::get('/admin/users', 'admin\AdminUserController@getAllUser');
 
 ///////// Logged User API
 Route::get('/logged/home', function () {

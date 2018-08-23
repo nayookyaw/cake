@@ -1,0 +1,47 @@
+.menubar {
+	background-color: #000000;
+}
+#nav {
+display:table; /* centers modern browsers */
+margin:0 auto; /* centers modern browsers */
+text-align:center; /* centers IE6/7 */
+}
+#nav ul {
+list-style:none;
+display:inline-block; /* IE6/7 haslayout trip-switch */
+}
+#nav ul {
+display:inline; /* IE6/7 haslayout trip-switch, and IE6/7 only need ul to be display inline, yet does no harm to others */
+}
+#nav li {
+display:inline;
+}
+#nav a {
+float:left;
+text-decoration:none;
+padding:10px 40px; /* variable width */
+background-color: #000000;
+color: white;
+font-size: 14px;
+}
+.menubar #nav ul .active a{
+	background-color: white;
+	background-size: cover;
+	color: black;
+}
+.menubar #nav ul a:hover{
+	background-color: white;
+	background-size: cover;
+	color: black;
+}
+.menubar span {
+	position: absolute;
+	right: 5%;
+	top : 5%;
+	color:red;
+	width: auto;
+	background-color: white;
+	border-radius: 70%;
+	text-align: center;
+	padding: 10px;
+}

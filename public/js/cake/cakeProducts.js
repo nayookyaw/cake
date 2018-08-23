@@ -28,9 +28,15 @@ function setPaging() {
 
 function getDescription() {
 	$(".img").click(function (){
-		swal($(this).attr('data-value'), {
-			buttons: false,
-		});
+		swal({
+		  title: $(this).attr('p-index'),
+		  text: $(this).attr('data-value'),
+		  icon: (".."+ $(this).find('img').attr('src')),
+		  imageWidth: 400,
+		  imageHeight: 200,
+		  imageAlt: 'Custom image',
+		  animation: false
+		})
 	});
 }
 

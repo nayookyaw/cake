@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="../../../img/icon/icon.ico" />
 
     <!-- CSRF Token -->
     <meta name="_token" content="{{ csrf_token() }}">
@@ -21,10 +22,11 @@
 		<link rel="stylesheet" href="/css/library/jquery.modal.css">
 		<link rel="stylesheet" href="/css/library/jquery.modal.min.css">
 		<link rel="stylesheet" href="/css/library/tipped.css">
+		<link rel="stylesheet" href="/css/library/jquery.sweet-modal.css">
 
 		<link rel="stylesheet" href="/css/logged/master/main.css">
 		<link rel="stylesheet" href="/css/logged/master/header.css">
-		<link rel="stylesheet" href="/css/logged/master/menu.css">
+		<link rel="stylesheet" href="/css/admin/master/menu.css">
 		<link rel="stylesheet" href="/css/logged/master/footer.css">
 
 		<!-- library js  -->
@@ -38,6 +40,7 @@
 		<script src="../../../js/library/select2.min.js"></script>
 		<script src="../../../js/library/tilt.jquery.min.js"></script>
 		<script src="../../../js/library/sweetalert.js"></script>
+		<script src="../../../js/library/jquery.sweet-modal.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -55,7 +58,8 @@
 
 					<li class=""><a href="/admin/products">PRODUCTS</a></li>
 					<li class=""><a href="/admin/orders">ORDERS</a></li>
-					<li><a href="/faq">FAQ</a></li>
+					<li><a href="/admin/cash">CASH</a></li>
+					<li><a href="/admin/users">USERS</a></li>
 						@if (!Auth::guest())
 							<a href="{{ route('logout') }}"
 									onclick="event.preventDefault();
