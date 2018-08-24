@@ -79,7 +79,7 @@
 
 	<div class="footer">
 		@section('footer')
-		Bakery Service Center, © 2018 All Right Reserved.
+		Team 16 Bakery Service, © 2018 All Right Reserved.
 	</div>
 
 
