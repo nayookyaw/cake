@@ -16,15 +16,21 @@
 	<h4>Daily Overview</h4>
 	<hr/>
 
-	<table border="1">
-		<tr>
-			<th>Customer Name</th>
-			<th>Total</th>
-		</tr>
+	<table id ="today_users" number-per-page="5" current-page="0">
+		<thead>
+			<tr>
+				<th>Customer Name</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
 	</table>
 </div>
+
 @endsection
 
 @section('js')
 	<script src="../js/admin/home.js"></script>
+	<script src="../js/library/simplepagination.js"></script>
 @endsection

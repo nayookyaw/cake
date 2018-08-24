@@ -1,5 +1,4 @@
 $(window).on ('load', function (){
-	console.log ("Woooo Yeah");
 	getSummary();
 });
 
@@ -11,11 +10,16 @@ function getSummary() {
 			'_token' : $('meta[name="_token"]').attr('content')
 		},
 		success : function (result) {
-			console.log (result);
+			$("tbody").empty().append(result);
+			setPaging();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
 			swal({ text: $error });
 		}
 	});
+}
+
+function setPaging() {
+	$("#today_users").pagination();
 }

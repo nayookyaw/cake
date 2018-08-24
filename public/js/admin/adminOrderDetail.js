@@ -1,6 +1,7 @@
 
 calculateSummaryTotal();
 closeOrder();
+cancelOrder();
 
 function closeOrder() {
 	$(".close_order").click(function (){
@@ -28,6 +29,38 @@ function closeOrder() {
 
 	});
 }
+
+function cancelOrder() {
+	$(".btn_order_cancel").click(function() {
+		$product_id = $(this).parent().attr('data-value');
+		$user_id = $(this).parent().parent().attr('data-value');
+		$date = $(this).parent().parent().attr('data-date');
+
+		$.ajax({
+			url : '/admin/orders/cancel',
+			method : 'delete',
+			data : {
+				'user_id' : $user_id,
+				'product_id' : $product_id,
+				'date' : $date,
+				'_token' : $('meta[name="_token"]').attr('content')
+			},
+			success : function (result) {
+				swal("Sucessful Order Canceled", {
+					buttons: false,
+					timer: 1000,
+				});
+				setTimeout(function(){ location.reload(); }, 2000);
+			},
+			error : function (error){
+				$error = error.responseJSON.error;
+				swal({ text: $error });
+			}
+		});
+
+	});
+}
+
 function calculateSummaryTotal() {
 	$current_total_arr = [];
 	$total_tmp = 0;

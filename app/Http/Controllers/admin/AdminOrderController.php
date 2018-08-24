@@ -45,4 +45,21 @@ class AdminOrderController extends Controller
 
 		DB::table('orders')->where('orders.user_id', '=', $user_id)->delete();
 	}
+
+	public function cancelOrder(Request $inputs)
+	{
+		$user_id = $inputs->get('user_id');
+		$product_id = $inputs->get('product_id');
+		$date = $inputs->get('date');
+
+		DB::table('orders')->where('orders.user_id', '=', $user_id)
+					->where('orders.product_id', '=', $product_id)
+					->where('orders.updated_at', '=', $date)
+					->delete();
+
+		DB::table('order_histories')->where('order_histories.user_id', '=', $user_id)
+					->where('order_histories.product_id', '=', $product_id)
+					->where('order_histories.updated_at', '=', $date)
+					->delete();
+	}
 }

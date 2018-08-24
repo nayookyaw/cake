@@ -11,7 +11,7 @@
 
 		<span class="from_price">
 			From
-			<input type="text" class="from form-control">
+			<input type="text" class="from form-control" placeholder="Search price..">
 		</span>
 		&nbsp;&nbsp;
 		<span class="to_price">

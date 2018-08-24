@@ -21,16 +21,18 @@
 				<th>Price</th>
 				<th>Total</th>
 				<th>Order Date</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
 			@foreach($orders as $order)
-				<tr>
+				<tr data-value = "{{ $order->user_id }}" data-date = "{{ $order->updated_at }}">
 					<td>{{ $order->product_name }}</td>
 					<td>{{ $order->product_qty }}</td>
 					<td>{{ $order->product_price }}</td>
 					<td class="total">{{ $order->total }}</td>
 					<td>{{ $order->updated_at }}</td>
+					<td data-value=" {{ $order->product_id }}"><button class="btn_order_cancel btn-danger"><span class="glyphicon glyphicon-remove"></span></button></td>
 				</tr>
 			@endforeach
 		</tbody>

@@ -14,7 +14,7 @@
 Route::get('/', function () {
 	return view('cake/home');
 });
-// Cake Product API
+// Cake Product API  ///
 Route::get('/products', function() {
 	return view('cake/products');
 });
@@ -29,7 +29,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Admin API Collections
+// Admin API Collections ///
 Route::get('/admin/home/summary', 'Admin\HomeController@summary');
 
 Route::get('/admin/home', function() {
@@ -37,7 +37,7 @@ Route::get('/admin/home', function() {
 });
 Route::get('/cake/products/all', 'Cake\CakeProductController@getAll');
 
-///////// Products Menu API
+///////// Products Menu API ///
 Route::get('/admin/products', function () {
 	return view('admin/products');
 });
@@ -66,6 +66,8 @@ Route::get('/admin/orders/all', 'admin\AdminOrderController@getAllOrder');
 Route::get('/admin/orders/detail/{user_id}', 'admin\AdminOrderController@getOrderDetail');
 
 Route::delete('/admin/orders/close', 'admin\AdminOrderController@closeOrder');
+
+Route::delete('/admin/orders/cancel', 'admin\AdminOrderController@cancelOrder');
 
 // Cash API Collections /////////
 Route::get('/admin/cash', function() {
