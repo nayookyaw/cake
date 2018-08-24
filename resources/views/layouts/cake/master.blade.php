@@ -40,7 +40,7 @@
 				@section('menubar')
 					<div id="nav">
 						<ul>
-							<li class="active"><a href="/">HOME</a></li>
+							<li class=""><a href="/">HOME</a></li>
 							<li class=""><a href="/products">PRODUCTS</a></li>
 							<li><a href="/contact">CONTACT US</a></li>
 							<li><a href="/about">ABOUT US</a></li>
@@ -54,6 +54,9 @@
 					</div>
 			</div>
 
+			<div class="slide">
+				@yield('slide')
+			</div>
       <div class="content">
           @yield('content')
 					<br><br><br><br><br><br><br>

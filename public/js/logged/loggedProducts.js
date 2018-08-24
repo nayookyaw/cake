@@ -14,6 +14,7 @@ function getProducts() {
 			setPaging();
 			addToOrder();
 			disabledClick();
+			getDescription();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
@@ -29,6 +30,20 @@ function setPaging() {
 function disabledClick() {
 	$(".name,.price, .description, .img").click(function (){
 		return false;
+	});
+}
+
+function getDescription() {
+	$(".img").click(function (){
+		swal({
+		  title: $(this).attr('p-index'),
+		  text: $(this).attr('data-value'),
+		  icon: (".."+ $(this).find('img').attr('src')),
+		  imageWidth: 400,
+		  imageHeight: 200,
+		  imageAlt: 'Custom image',
+		  animation: false
+		})
 	});
 }
 

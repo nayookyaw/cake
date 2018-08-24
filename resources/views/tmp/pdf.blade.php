@@ -34,7 +34,7 @@
 		</style>
 	</head>
 	<body>
-		<span class="logo">Team 11 Bakery Shop</span><br><br><br>
+		<span class="logo">Team 16 Bakery Service</span><br><br><br>
 		<span>Name : {{ Auth::user()->name }}</span><br>
 		<span>Date : {{ $current_date }}</span><br>
 		<span>The Total Amount is <span class="total">{{ $total_amount }}</span> kyats</span>

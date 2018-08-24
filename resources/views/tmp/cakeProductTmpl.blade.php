@@ -10,9 +10,5 @@
 			@if (Auth::check())
 				<td><button class="btn_buy btn btn-info btn-xs">Buy</button></td>
 			@endif
-
 		</tr>
-
-
-
 @endforeach
