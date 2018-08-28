@@ -1,0 +1,27 @@
+.slide {
+	margin: 0;
+	background-image: url("/img/contact/contact_bg1.jpeg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide .address {
+	padding: 0 35%;
+}
+.slide .address h2 {
+	font: italic 1em Georgia, Times, serif;
+	font-size: 40px;
+	width: 500px;
+	text-align: center;
+	background-color: green;
+	color: white;
+	padding: 10px 0px;
+}
+.slide .address p {
+	font-size: 17px;
+	width: 500px;
+	text-align: center;
+	padding: 10px 0px;
+	color: #b73333;
+}

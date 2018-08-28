@@ -1,0 +1,45 @@
+.hover1 {
+	background-color: #808000;
+}
+.hover2 {
+	background-color: #800080;
+}
+.hover3 {
+	background-color: #000000;
+}
+.hover4 {
+	background-color: #FFFFFF;
+	color: black
+}
+.content {
+	color: white;
+}
+.first {
+	width: 500px;
+	background-color: #A52A2A;
+	text-align: center;
+	padding: 4px 0px;
+}
+.second {
+	width: 500px;
+	background-color: #008000;
+	float: right;
+	text-align: center;
+}
+.third {
+	width: 500px;
+	background-color: #800080;
+	clear: both;
+	text-align: center;
+	padding: 4px 0px;
+}
+.four {
+	width: 500px;
+	background-color: #808000;
+	float: right;
+	text-align: center;
+}
+.move {
+	color: red;
+	font-size: 25px;
+}

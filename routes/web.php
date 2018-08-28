@@ -14,6 +14,12 @@
 Route::get('/', function () {
 	return view('cake/home');
 });
+Route::get('/contact', function() {
+	return view('cake/contact');
+});
+Route::get('/about', function() {
+	return view('cake/about');
+});
 // Cake Product API  ///
 Route::get('/products', function() {
 	return view('cake/products');
@@ -98,6 +104,10 @@ Route::get('/logged/products', function() {
 Route::get('/logged/products/all', 'logged\LoggedProductController@getAll');
 
 Route::post('/logged/products/addOrder', 'logged\LoggedProductController@addOrder');
+
+Route::get('/logged/products/search', 'logged\LoggedProductController@searchProducts');
+
+Route::get('/logged/products/search/price', 'logged\LoggedProductController@searchPrice');
 
 Route::get('/logged/orders', function () {
 	return view('logged/orders');

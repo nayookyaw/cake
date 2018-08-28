@@ -6,6 +6,10 @@
 	width: 200px;
 	float: left;
 }
+.content tbody .name {
+	font: italic 1em Georgia, Times, serif;
+	color: red;
+}
 .content table tr:hover{
   cursor: auto !important;
   background-color: white !important;

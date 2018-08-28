@@ -1,3 +1,6 @@
 .content h3 {
 	color: red;
 }
+.content tbody .name {
+	font: italic 1em Georgia, Times, serif;
+}

@@ -1,3 +1,11 @@
+.from_price {
+	width: 200px;
+	float: left;
+}
+.to_price {
+	width: 200px;
+	float: left;
+}
 .content table tr:hover{
   cursor: auto !important;
   background-color: white !important;
@@ -28,4 +36,8 @@
 .content .active {
   background: #871610;
   color: white;
+}
+.content tbody .name {
+	font: italic 1em Georgia, Times, serif;
+	color: red;
 }

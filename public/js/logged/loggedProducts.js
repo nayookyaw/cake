@@ -15,6 +15,8 @@ function getProducts() {
 			addToOrder();
 			disabledClick();
 			getDescription();
+			searchProducts();
+			searchRange();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
@@ -73,4 +75,53 @@ function addToOrder() {
 			});
 
     });
+}
+
+function searchRange() {
+	$(".search_price").click(function() {
+		$min = $(".from").val();
+		$max = $(".to").val();
+		$.ajax({
+			url : '/logged/products/search/price',
+			method : 'get',
+			data : {
+				'min' : $min,
+				'max' : $max,
+				'_token' : $('meta[name="_token"]').attr('content')
+			},
+			success : function (result) {
+				$("tbody").empty().append(result);
+				getDescription();
+				addToOrder();
+			},
+			error : function (error){
+				$error = error.responseJSON.error;
+				swal({ text: $error });
+			}
+		});
+	});
+}
+
+function searchProducts() {
+	$('.search_all').on('keyup', function() {
+		$search = $(this).val();
+		$.ajax({
+			url : '/logged/products/search',
+			method : 'get',
+			data : {
+				'search' : $search,
+				'_token' : $('meta[name="_token"]').attr('content')
+			},
+			success : function (result) {
+				$("tbody").empty().append(result);
+				getDescription();
+				addToOrder();
+			},
+			error : function (error){
+				$error = error.responseJSON.error;
+				swal({ text: $error });
+			}
+		});
+
+	});
 }
