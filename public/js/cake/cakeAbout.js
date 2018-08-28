@@ -1,27 +1,13 @@
-$( ".first" ).hover(
+$("#about_table tr td").hover(
   function() {
-    $( this ).find("h2").addClass( "hover1" );
+    $( this ).addClass( "hover" );
   }, function() {
-    $( this ).find("h2").removeClass( "hover1" );
+    $( this ).removeClass( "hover" );
   });
 
-$( ".second" ).hover(
-  function() {
-    $( this ).find("h2").addClass( "hover2" );
-  }, function() {
-    $( this ).find("h2").removeClass( "hover2" );
-  });
-
-$( ".third" ).hover(
-  function() {
-    $( this ).find("h2").addClass( "hover3" );
-  }, function() {
-    $( this ).find("h2").removeClass( "hover3" );
-  });
-
-$( ".four" ).hover(
-  function() {
-    $( this ).find("h2").addClass( "hover4" );
-  }, function() {
-    $( this ).find("h2").removeClass( "hover4" );
-  });
+	$("#about_table tr th").hover(
+	  function() {
+	    $( this ).addClass( "hover" );
+	  }, function() {
+	    $( this ).removeClass( "hover" );
+	  });

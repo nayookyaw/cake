@@ -5,37 +5,25 @@
 @endsection
 
 @section('content')
-<br><br>
-	<div class="first">
-		<h2>Name1</h2>
-		<p>2CST - 78 <br>
-			University of Computer Studies, Mandalay
-		</p>
-	</div>
-
-	<div class="second">
-		<h2>Name1</h2>
-		<p>2CST - 78 <br>
-			University of Computer Studies, Mandalay
-		</p>
-	</div>
-	<br><br><br><br>
-	<div class="third">
-		<h2>Name1</h2>
-		<p>2CST - 78 <br>
-			University of Computer Studies, Mandalay
-		</p>
-	</div>
-
-	<div class="four">
-		<h2>Name1</h2>
-		<p>2CST - 78 <br>
-			University of Computer Studies, Mandalay
-		</p>
-	</div>
-	<br><br><br><br><br>
+<br>
+	<hr>
+	<table id="about_table">
+		<tr>
+			<th colspan= 2 class="super">Supervisor <br>
+			University of Computer Studies, Mandalay</th>
+		</tr>
+		<tr>
+			<td class="first">First Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
+			<td class="second">Second Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
+		</tr>
+		<tr>
+			<td class="third">Third Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
+			<td class="four">Four Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
+		</tr>
+	</table>
+	<hr>
 	<div class="move">
-		<br><br><br>
+		<br>
 		<marquee behavior="scroll" direction="left" scrollamount="5">Write here about you</marquee>
 	</div>
 

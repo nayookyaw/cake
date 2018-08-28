@@ -1,45 +1,47 @@
-.hover1 {
-	background-color: #808000;
+hr {
+	border-top: 2px solid #ea0707 !important;
+	color: red;
 }
-.hover2 {
-	background-color: #800080;
+#about_table tr th{
+	padding: 40px;
+	border-bottom: 0.5px dashed red;
 }
-.hover3 {
-	background-color: #000000;
-}
-.hover4 {
-	background-color: #FFFFFF;
-	color: black
-}
-.content {
+#about_table tr td{
+	padding: 40px;
 	color: white;
 }
-.first {
+#about_table tr:hover{
+	cursor: default !important;
+  background-color: #FFFFFF !important;
+}
+.super {
 	width: 500px;
 	background-color: #A52A2A;
 	text-align: center;
 	padding: 4px 0px;
 }
+.first {
+	background-color: #A52A2A;
+	text-align: center;
+}
 .second {
-	width: 500px;
 	background-color: #008000;
-	float: right;
 	text-align: center;
 }
 .third {
-	width: 500px;
 	background-color: #800080;
-	clear: both;
 	text-align: center;
-	padding: 4px 0px;
 }
 .four {
-	width: 500px;
 	background-color: #808000;
-	float: right;
 	text-align: center;
 }
 .move {
 	color: red;
 	font-size: 25px;
+}
+.hover {
+	/* background-color: #000000 !important; */
+	background-image: url("/img/contact/contact_bg1.jpeg") !important;
+	color: black !important;
 }
