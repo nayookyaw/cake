@@ -4,7 +4,6 @@
 	<link rel="stylesheet" href="/css/cake/cakeHome.css">
 @endsection
 
-
 @section('slide')
 <hr>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -22,7 +21,7 @@
 		<div class="item active">
 			<img src="img/slide/slide4.jpg" style="width: 100%; height: 70vh;">
 			<div class="carousel-caption">
-          <h3>Team 16 Bakery Service</h3>
+          <h3>Nay Oo Kyaw Bakery Service</h3>
           <p>Enjoy the Great Tastes with Us!!</p>
 					<a href="/products"><button class="btn btn-success btn-lg">Get Start</button></a><br><br>
         </div>
@@ -31,7 +30,7 @@
 		<div class="item">
 			<img src="img/slide/slide5.jpg" style="width: 100%; height: 70vh;">
 			<div class="carousel-caption">
-          <h3>Team 16 Bakery Service</h3>
+          <h3>Nay Oo Kyaw Bakery Service</h3>
           <p>Enjoy the Great Tastes with Us!!</p>
 					<a href="/products"><button class="btn btn-primary btn-lg">Get Start</button></a><br><br>
         </div>
@@ -40,7 +39,7 @@
 		<div class="item">
 			<img src="img/slide/slide2.jpg" style="width: 100%; height: 70vh;">
 			<div class="carousel-caption">
-          <h3>Team 16 Bakery Service</h3>
+          <h3>Nay Oo Kyaw Bakery Service</h3>
           <p>Enjoy the Great Tastes with Us!!</p>
 					<a href="/products"><button class="btn btn-info btn-lg">Get Start</button></a><br><br>
         </div>
@@ -49,7 +48,7 @@
 		<div class="item">
 			<img src="img/slide/slide6.jpg" style="width: 100%; height: 70vh;">
 			<div class="carousel-caption">
-          <h3>Team 16 Bakery Service</h3>
+          <h3>Nay Oo Kyaw Bakery Service</h3>
           <p>Enjoy the Great Tastes with Us!!</p>
 					<a href="/products"><button class="btn btn-danger btn-lg">Get Start</button></a><br><br>
         </div>
@@ -58,7 +57,7 @@
 		<div class="item">
 			<img src="img/slide/slide6.jpeg" style="width: 100%; height: 70vh;">
 			<div class="carousel-caption">
-          <h3>Team 16 Bakery Service</h3>
+          <h3>Nay Oo Kyaw Bakery Service</h3>
           <p>Enjoy the Great Tastes with Us!!</p>
 					<a href="/products"><button class="btn btn-warning btn-lg">Get Start</button></a><br><br>
         </div>

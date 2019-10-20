@@ -1,6 +1,7 @@
 
 addProducts();
 previewImage();
+clearImage();
 
 function addProducts() {
 	$(".create_product").click(function (e) {
@@ -59,13 +60,13 @@ function addProducts() {
 
 function previewImage() {
 	$(".file").change(function() {
-		$(".img_preview").empty().append("<img id ='product_img' width='80%' height='40%'>&nbsp;&nbsp;<button class='btn_clear_img btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button>");
+		$(".img_preview").empty().append("<img id ='product_img' width='80%' height='40%'>&nbsp;&nbsp;<span class='btn_clear_img btn btn-danger'><span class='glyphicon glyphicon-trash'></span></span>");
 	  readImage(this);
+	  clearImage();
 	});
 }
 
 function readImage(input) {
-
   if (input.files && input.files[0]) {
     var reader = new FileReader();
     reader.onload = function(e) {
@@ -73,4 +74,13 @@ function readImage(input) {
     }
     reader.readAsDataURL(input.files[0]);
   }
+}
+
+function clearImage() {
+	$(".btn_clear_img").click(function(e) {
+		$("#product_img").attr('data-index', '');
+		$(".product_content img").attr('src', '');
+		$(".img_preview").empty();
+		$('.file').val('');
+	});
 }

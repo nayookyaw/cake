@@ -10,7 +10,6 @@ function getAllOrders() {
 		},
 		success : function (result) {
 			$("tbody").empty().append(result);
-			setPaging();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
@@ -19,6 +18,3 @@ function getAllOrders() {
 	});
 }
 
-function setPaging() {
-	$("#order_table").pagination();
-}

@@ -9,22 +9,22 @@
 	<hr>
 	<table id="about_table">
 		<tr>
-			<th colspan= 2 class="super">Supervisor <br>
-			University of Computer Studies, Mandalay</th>
+			<th colspan= 2 class="super">Project Manager <br>
+			Nay Oo Kyaw</th>
 		</tr>
 		<tr>
-			<td class="first">First Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
-			<td class="second">Second Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
+			<td class="first">Project Leader <br> Nay Oo Kyaw  </td>
+			<td class="second">Senior Developer <br> Nay Oo Kyaw </td>
 		</tr>
 		<tr>
-			<td class="third">Third Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
-			<td class="four">Four Name <br> 2CST- 34 <br> University of Computer Studies, Mandalay </td>
+			<td class="third">Project Designer <br> Nay Oo Kyaw  </td>
+			<td class="four">Project Tester <br> Nay Oo Kyaw  </td>
 		</tr>
 	</table>
 	<hr>
 	<div class="move">
 		<br>
-		<marquee behavior="scroll" direction="left" scrollamount="5">Write here about you</marquee>
+		<marquee behavior="scroll" direction="left" scrollamount="5">We are always with you</marquee>
 	</div>
 
 @endsection

@@ -1,6 +1,6 @@
 .slide {
-	margin: 0;
-	background-image: url("/img/contact/contact_bg1.jpeg");
+  margin: 0;
+  background-image: url("/img/contact/contact_bg3.jpg");
   height: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,5 +23,6 @@
 	width: 500px;
 	text-align: center;
 	padding: 10px 0px;
-	color: #b73333;
+	color: #ffffff;
+	background-color: slategrey;
 }

@@ -12,7 +12,6 @@ function getProducts() {
 		},
 		success : function (result) {
 			$("tbody").append(result);
-			setPaging();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
@@ -21,6 +20,3 @@ function getProducts() {
 	});
 }
 
-function setPaging() {
-	$("#product_table").pagination();
-}

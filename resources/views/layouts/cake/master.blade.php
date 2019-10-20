@@ -64,7 +64,7 @@
 
 			<div class="footer">
 				@section('footer')
-				Team 16 Bakery Service, © 2018 All Right Reserved.
+				Nay Oo Kyaw Bakery Service, © 2019 All Right Reserved.
 			</div>
 			@section('js')
 			<script src="{{ asset('js/app.js') }}"></script>

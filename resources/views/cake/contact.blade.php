@@ -8,9 +8,9 @@
 <br><br>
 	<div class="address">
 		<h2>Address</h2>
-		<p>University of Computer Studies, Mandalay
-			Pathein Gyi Township, Mandalay Regional Division <br>
-			Post office box number : 12<br>
+		<p>
+			No(123,125), Nay Oo Kyaw Street, Nay Oo Kyaw Housing, <br>
+			Nay Oo Kyaw Township, Yangon, Myanmar <br>
 			Contact Number : +95 9 786505012, +95 9 896502215
 		</p>
 	</div>

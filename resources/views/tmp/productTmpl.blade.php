@@ -1,3 +1,7 @@
+@if(count($products) == 0)
+	<tr><td colspan="5">There is no product lists</td></tr>
+@endif
+
 @foreach($products as $product)
 		<tr>
 			<td>{{ $product->id }}</td>

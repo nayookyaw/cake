@@ -31,5 +31,5 @@
 
 @section('js')
 	<script src="../js/admin/products.js"></script>
-	<script src="../js/library/simplepagination.js"></script>
+	<!-- <script src="../js/library/simplepagination.js"></script> -->
 @endsection
