@@ -1,5 +1,4 @@
 
-setPaging();
 $('[data-toggle="tooltip"]').tooltip();
 
 $("tr").click(function (){
@@ -13,6 +12,3 @@ $("tr").click(function (){
 	});
 });
 
-function setPaging() {
-	$("#user_table").pagination();
-}

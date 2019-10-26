@@ -11,7 +11,6 @@ function getSummary() {
 		},
 		success : function (result) {
 			$("tbody").empty().append(result);
-			setPaging();
 		},
 		error : function (error){
 			$error = error.responseJSON.error;
@@ -20,6 +19,3 @@ function getSummary() {
 	});
 }
 
-function setPaging() {
-	$("#today_users").pagination();
-}

@@ -44,9 +44,8 @@ class LoggedProductController extends Controller
 	{
 		$product_id = $inputs->get('id');
 		$product_name = $inputs->get('name');
-		$product_price = $inputs->get('price');
+		$product_price = str_replace("kyats", "", $inputs->get('price'));
 		$user_id = Auth::user()->id;
-
 		$order_tmp = new \App\OrdersTemp;
 		$order_tmp->user_id = $user_id;
 		$order_tmp->product_id = $product_id;

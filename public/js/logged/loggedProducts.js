@@ -11,7 +11,6 @@ function getProducts() {
 		},
 		success : function (result) {
 			$("tbody").append(result);
-			setPaging();
 			addToOrder();
 			disabledClick();
 			getDescription();
@@ -23,10 +22,6 @@ function getProducts() {
 			swal({ text: $error });
 		}
 	});
-}
-
-function setPaging() {
-	$("#product_table").pagination();
 }
 
 function disabledClick() {
@@ -53,7 +48,7 @@ function addToOrder() {
 		$("#product_table tr").click(function(e){
 			e.preventDefault();
 			$id = $(this).attr('data-index');
-      $name = $(this).find("h4").text();
+      		$name = $(this).find("h4").text();
 			$price = $(this).find(".price").text();
 
 			$.ajax({
