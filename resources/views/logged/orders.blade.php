@@ -13,8 +13,8 @@
 				<span class="summary"></span>&nbsp;kyats
 			</span>
 			<span class="submit_order">
-				<a href="/logged/orders/detail"><button class="order_lists btn btn-warning">Order Lists</button></a>&nbsp;&nbsp;
-				<button class="btn_submit btn btn-success btn-sm">Submit</button><br>
+				<a href="/logged/orders/detail"><button class="order_lists btn btn-warning">Ordered Lists</button></a>&nbsp;&nbsp;
+				<button class="btn_submit btn btn-success btn-sm">Submit Order</button><br>
 			</span>
 			<br>
 			<br>

@@ -42,6 +42,3 @@ function getAllOrderByName() {
 	});
 }
 
-function setPaging() {
-	$("#cash_table").pagination();
-}

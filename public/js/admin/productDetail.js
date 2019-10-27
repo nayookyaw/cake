@@ -97,8 +97,8 @@ function deleteProducts() {
 }
 
 function clearImage() {
-	console.log ("Start..");
 	$(".btn_clear_img").click(function(e) {
+		e.preventDefault();
 		console.log ("Clickc");
 		$("#product_img").attr('data-index', '');
 		$(".product_content img").attr('src', 'clear');

@@ -93,6 +93,7 @@
 	@section('js')
 	<script src="{{ asset('js/app.js') }}"></script>
 	<script src="../../../js/admin/productDetail.js"></script>
+	<script src="../../../js/common.js"></script>
 	@show
 </body>
 </html>

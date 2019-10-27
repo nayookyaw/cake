@@ -62,7 +62,7 @@
                             </div>
                         </div>
 
-												<div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+							<div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                             <label for="phone" class="col-md-4 control-label">Phone Number</label>
 
                             <div class="col-md-6">
@@ -76,7 +76,7 @@
                             </div>
                         </div>
 
-												<div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+							<div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                             <label for="address" class="col-md-4 control-label">Address</label>
 
                             <div class="col-md-6">
@@ -96,10 +96,10 @@
                                     Register
                                 </button>
                             </div>
-														<br><br><br><br><br>
-														<div class="col-md-12 text-right">
-															<a href="{{ url('/login') }}"><span class="glyphicon glyphicon-lock"></span> Login</a>
-														</div>
+                                <br><br><br><br><br>
+                                <div class="col-md-12 text-right">
+                                    <a href="{{ url('/login') }}"><span class="glyphicon glyphicon-lock"></span> Login</a>
+                                </div>
                         </div>
                     </form>
                 </div>

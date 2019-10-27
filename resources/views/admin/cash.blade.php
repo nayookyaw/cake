@@ -8,10 +8,6 @@
 <br>
 	<h3>Cash Summary</h3>
 	<br>
-	<input type="text" id="search_name" placeholder="Search name..">
-	<input type="button" class="btn_search btn btn-success btn-sm" value="Search">
-	<a href="/admin/cash/date"><input type="button" class="btn_search_date btn btn-info btn-sm" value="Search by Date"></a>
-	<br><br>
 	<table id="cash_table" number-per-page="10" current-page="0">
 		<thead>
 			<tr>
