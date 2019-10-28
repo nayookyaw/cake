@@ -40,15 +40,15 @@
 				@section('menubar')
 					<div id="nav">
 						<ul>
-							<li class=""><a href="/">HOME</a></li>
-							<li class=""><a href="/products">PRODUCTS</a></li>
-							<li><a href="/contact">CONTACT US</a></li>
-							<li><a href="/about">ABOUT US</a></li>
+							<li class="active" id="home"><a href="/">HOME</a></li>
+							<li id="products"><a href="/products">PRODUCTS</a></li>
+							<li id="contact"><a href="/contact">CONTACT US</a></li>
+							<li id="about"><a href="/about">ABOUT US</a></li>
 							@if (Auth::check())
-									<li><a href="{{ url('/home') }}">LOGIN</a></li>
+									<li id="login"><a href="{{ url('/home') }}">LOGIN</a></li>
 							@else
-									<li><a href="{{ url('/login') }}">LOGIN</a></li>
-									<li><a href="{{ url('/register') }}">REGISTER</a></li>
+									<li id="login"><a href="{{ url('/login') }}">LOGIN</a></li>
+									<li id="register"><a href="{{ url('/register') }}">REGISTER</a></li>
 							@endif
 						</ul>
 					</div>
@@ -68,6 +68,7 @@
 			</div>
 			@section('js')
 			<script src="{{ asset('js/app.js') }}"></script>
+			<script src="../../../js/common.js"></script>
 			@show
     </body>
 

@@ -10,7 +10,6 @@ function getProducts() {
 		},
 		success : function (result) {
 			$("tbody").empty().append(result);
-			setPaging();
 			getDescription();
 			searchProducts();
 			searchRange();
@@ -20,10 +19,6 @@ function getProducts() {
 			swal({ text: $error });
 		}
 	});
-}
-
-function setPaging() {
-	$("#product_table").pagination();
 }
 
 function getDescription() {

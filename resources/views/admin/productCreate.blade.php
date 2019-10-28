@@ -42,4 +42,5 @@
 
 @section('js')
 	<script src="../../js/admin/productCreate.js"></script>
+	<script src="../../js/common.js"></script>
 @endsection

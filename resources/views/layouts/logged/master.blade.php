@@ -45,13 +45,13 @@
 			<div id="nav">
 				<ul>
 					@if( Auth::check())
-						<li class="active"><a href="{{ url('/logged/home') }}">HOME</a></li>
+						<li class="active" id="home"><a href="{{ url('/logged/home') }}">HOME</a></li>
 					@else
-						<li class="active"><a href="{{ url('/') }}">HOME</a></li>
+						<li class="active" id="home"><a href="{{ url('/') }}">HOME</a></li>
 					@endif
 
-					<li class=""><a href="/logged/products">PRODUCTS</a></li>
-					<li><a href="/logged/orders">ORDERS</a></li>
+					<li id="products"><a href="/logged/products">PRODUCTS</a></li>
+					<li id="orders"><a href="/logged/orders">ORDERS</a></li>
 						@if (!Auth::guest())
 							<a href="{{ route('logout') }}"
 									onclick="event.preventDefault();
@@ -86,6 +86,6 @@
 	@section('js')
 	<script src="{{ asset('js/app.js') }}"></script>
 	@show
-	<!-- <script src="../js/admin/home.js"></script> -->
+	<script src="../js/common.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 	<h3>Product Lists</h3>
 
 	<div class="function">
-		<a href="/admin/productcreate"><button class="create_product btn btn-success">Add</button></a>
+		<a href="/admin/products/create"><button class="create_product btn btn-success">Add</button></a>
 	</div>
 
 	<br>

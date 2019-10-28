@@ -51,15 +51,15 @@
 			<div id="nav">
 				<ul>
 					@if( Auth::check())
-						<li class="active"><a href="{{ url('/admin/home') }}">HOME</a></li>
+						<li class="active" id="home"><a href="{{ url('/admin/home') }}">HOME</a></li>
 					@else
-						<li class="active"><a href="{{ url('/') }}">HOME</a></li>
+						<li class="active" id="home"><a href="{{ url('/') }}">HOME</a></li>
 					@endif
 
-					<li class=""><a href="/admin/products">PRODUCTS</a></li>
-					<li class=""><a href="/admin/orders">ORDERS</a></li>
-					<li><a href="/admin/cash">CASH</a></li>
-					<li><a href="/admin/users">USERS</a></li>
+					<li id ="products"><a href="/admin/products">PRODUCTS</a></li>
+					<li id="orders"><a href="/admin/orders">ORDERS</a></li>
+					<li id="cash"><a href="/admin/cash">CASH</a></li>
+					<li id="users"><a href="/admin/users">USERS</a></li>
 						@if (!Auth::guest())
 							<a href="{{ route('logout') }}"
 									onclick="event.preventDefault();

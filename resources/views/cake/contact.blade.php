@@ -18,4 +18,5 @@
 
 @section('js')
 	<script src="js/cake/cakeContact.js"></script>
+	<script src="js/common.js"></script>
 @endsection

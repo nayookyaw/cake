@@ -23,5 +23,5 @@
 
 @section('js')
 	<script src="../js/admin/adminCash.js"></script>
-	<script src="../js/library/simplepagination.js"></script>
+	<script src="../js/common.js"></script>
 @endsection

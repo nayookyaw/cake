@@ -92,4 +92,5 @@
 
 @section('js')
 	<script src="/js/cake/cakeHome.js"></script>
+	<script src="/js/common.js"></script>
 @endsection

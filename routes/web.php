@@ -49,7 +49,7 @@ Route::get('/admin/products', function () {
 });
 Route::get('/admin/products/all', 'admin\ProductController@getAll');
 
-Route::get('/admin/productcreate', function () {
+Route::get('/admin/products/create', function () {
 	return view('admin/productCreate');
 });
 

@@ -31,4 +31,5 @@
 
 @section('js')
 	<script src="js/cake/cakeAbout.js"></script>
+	<script src="js/common.js"></script>
 @endsection

@@ -37,5 +37,5 @@
 
 @section('js')
 	<script src="../../js/logged/loggedOrdersDetail.js"></script>
-	<script src="../../js/library/simplepagination.js"></script>
+	<script src="../../js/common.js"></script>
 @endsection
