@@ -2,12 +2,11 @@
 setActiveMenu();
 
 function setActiveMenu() {
-    console.log("starting");
     clearActiveMenu();
     $url = window.location.href;
 
     // set menu active for admin
-    if ($url.includes("admin/home")) {
+    if ($url.includes("admin/home") || $url.includes("/home")) {
         $("#home").addClass("active");
     }
 
