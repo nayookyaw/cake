@@ -75,6 +75,8 @@ Route::delete('/admin/orders/close', 'admin\AdminOrderController@closeOrder');
 
 Route::delete('/admin/orders/cancel', 'admin\AdminOrderController@cancelOrder');
 
+Route::post('/admin/orders/individual', 'admin\AdminOrderController@individualOrder');
+
 // Cash API Collections /////////
 Route::get('/admin/cash', function() {
 	return view('admin/cash');

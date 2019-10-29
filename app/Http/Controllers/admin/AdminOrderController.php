@@ -62,4 +62,27 @@ class AdminOrderController extends Controller
 					->where('order_histories.updated_at', '=', $date)
 					->delete();
 	}
+
+	public function individualOrder(Request $inputs)
+	{
+		$order_id = $inputs->get('order_id');
+		$user_id = $inputs->get('user_id');
+
+		$order_info = DB::table('orders')->where('orders.id', '=', $order_id)
+					->where('orders.user_id', '=', $user_id)
+					->first();
+
+		$delivery = new \App\Delivery;
+		$delivery->user_id = $user_id;
+		$delivery->product_id = $order_info->product_id;
+		$delivery->product_qty = $order_info->product_qty;
+		$delivery->total = $order_info->total;
+		$delivery->save();
+
+		DB::table('orders')->where('orders.id', '=', $order_id)
+					->where('orders.user_id', '=', $user_id)
+					->delete();
+
+
+	}
 }

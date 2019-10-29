@@ -32,7 +32,10 @@
 					<td>{{ $order->product_price }}</td>
 					<td class="total">{{ $order->total }}</td>
 					<td>{{ $order->updated_at }}</td>
-					<td data-value=" {{ $order->product_id }}"><button class="btn_order_cancel btn-danger"><span class="glyphicon glyphicon-remove"></span></button></td>
+					<td data-value=" {{ $order->product_id }}">
+						<button class="btn_order_cancel btn-danger"><span class="glyphicon glyphicon-remove"></span></button>&nbsp;&nbsp;&nbsp;
+						<button class="btn_delivery_individual" data-value="{{ $order->id }}"><span class="glyphicon glyphicon-plus"></span></button>
+					</td>
 				</tr>
 			@endforeach
 		</tbody>

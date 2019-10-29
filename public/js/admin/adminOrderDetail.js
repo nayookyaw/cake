@@ -1,6 +1,7 @@
 
 calculateSummaryTotal();
 closeOrder();
+deliveryIndividual();
 cancelOrder();
 
 function closeOrder() {
@@ -15,7 +16,7 @@ function closeOrder() {
 				'_token' : $('meta[name="_token"]').attr('content')
 			},
 			success : function (result) {
-				swal("Sucessful Deliver", {
+				swal("Sucessful All Deliver", {
 					buttons: false,
 					timer: 1000,
 				});
@@ -46,7 +47,7 @@ function cancelOrder() {
 				'_token' : $('meta[name="_token"]').attr('content')
 			},
 			success : function (result) {
-				swal("Sucessful Order Canceled", {
+				swal("Sucessful Order", {
 					buttons: false,
 					timer: 1000,
 				});
@@ -58,6 +59,34 @@ function cancelOrder() {
 			}
 		});
 
+	});
+}
+
+function deliveryIndividual() {
+	$(".btn_delivery_individual").click(function() {
+		$order_id = $(this).attr('data-value');
+		$user_id = $(this).parent().parent().attr('data-value');
+
+		$.ajax({
+			url : '/admin/orders/individual',
+			method : 'post',
+			data : {
+				'order_id' : $order_id,
+				'user_id' : $user_id,
+				'_token' : $('meta[name="_token"]').attr('content')
+			},
+			success : function (result) {
+				swal("Sucessful Order", {
+					buttons: false,
+					timer: 1000,
+				});
+				setTimeout(function(){ location.reload(); }, 2000);
+			},
+			error : function (error){
+				$error = error.responseJSON.error;
+				swal({ text: $error });
+			}
+		});
 	});
 }
 

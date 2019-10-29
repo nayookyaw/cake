@@ -95,7 +95,7 @@ class ProductController extends Controller
 			$product_id = $inputs->get('product_id');
 
 			$product = Product::find($product_id);
-      $product->delete();
+      		$product->delete();
 
 			return;
 		}
