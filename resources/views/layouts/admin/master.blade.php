@@ -59,6 +59,7 @@
 					<li id ="products"><a href="/admin/products">PRODUCTS</a></li>
 					<li id="orders"><a href="/admin/orders">ORDERS</a></li>
 					<li id="cash"><a href="/admin/cash">CASH</a></li>
+					<li id="delivery"><a href="/admin/delivery">DELIVERY</a></li>
 					<li id="users"><a href="/admin/users">USERS</a></li>
 						@if (!Auth::guest())
 							<a href="{{ route('logout') }}"

@@ -28,7 +28,7 @@ class AdminOrderHistoryController extends Controller
 									->get();
 			$orders->user_id = $user_id;
 			array_push($order_histories, $orders);
-			}
+		}
 		return view('/tmp/adminOrderHistoriesTmpl', compact('order_histories', $order_histories));
 	}
 

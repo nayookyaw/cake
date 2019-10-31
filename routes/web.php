@@ -93,6 +93,13 @@ Route::get('/admin/cash/search/name', 'admin\AdminOrderHistoryController@getOrde
 
 ////// End Cash API ////////////
 
+Route::get('/admin/delivery', function () {
+	return view('admin/adminDelivery');
+});
+
+Route::get('/admin/delivery/all', 'admin\AdminDeliveryController@getAllDelivery');
+
+Route::get('/admin/delivery/detail/{user_id}', 'admin\AdminDeliveryController@getDeliveryDetail');
 /////// Start User API ///////
 Route::get('/admin/users', 'admin\AdminUserController@getAllUser');
 

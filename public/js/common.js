@@ -22,6 +22,10 @@ function setActiveMenu() {
         $("#cash").addClass("active");
     }
 
+    if($url.includes("admin/delivery")) {
+        $("#delivery").addClass("active");
+    }
+
     if($url.includes("admin/user")) {
         $("#users").addClass("active");
     }
