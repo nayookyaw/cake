@@ -43,6 +43,18 @@ class AdminOrderController extends Controller
 	{
 		$user_id = $inputs->get('user_id');
 
+		$order_info = DB::table('orders')->where('orders.user_id', '=', $user_id)
+					->get();
+					
+		foreach($order_info as $order) {
+			$delivery = new \App\Delivery;
+			$delivery->user_id = $user_id;
+			$delivery->product_id = $order->product_id;
+			$delivery->product_qty = $order->product_qty;
+			$delivery->total = $order->total;
+			$delivery->save();
+		}
+
 		DB::table('orders')->where('orders.user_id', '=', $user_id)->delete();
 	}
 
